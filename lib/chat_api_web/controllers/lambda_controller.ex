@@ -72,7 +72,7 @@ defmodule ChatApiWeb.LambdaController do
          opts <-
            params
            |> Map.delete("file")
-           |> Map.merge(%{"env" => %{"PAPERCUPS_API_KEY" => api_key}}),
+           |> Map.merge(%{"env" => %{"Hakerspeak_API_KEY" => api_key}}),
          {:ok, %Lambda{} = lambda} <- Lambdas.deploy_file(lambda, file, opts),
          updates <- Map.take(params, ["name", "description", "code"]),
          {:ok, %Lambda{} = lambda} <- Lambdas.update_lambda(lambda, updates) do

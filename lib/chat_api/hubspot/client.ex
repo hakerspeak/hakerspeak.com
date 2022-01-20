@@ -174,16 +174,16 @@ defmodule ChatApi.Hubspot.Client do
   def generate_auth_tokens(code) do
     create_auth_tokens(%{
       "grant_type" => "authorization_code",
-      "redirect_uri" => System.get_env("PAPERCUPS_HUBSPOT_REDIRECT_URI"),
+      "redirect_uri" => System.get_env("Hakerspeak_HUBSPOT_REDIRECT_URI"),
       "code" => code
     })
   end
 
   @spec create_auth_tokens(map()) :: {:error, any()} | {:ok, Tesla.Env.t()}
   def create_auth_tokens(params) do
-    # app_id = System.get_env("PAPERCUPS_HUBSPOT_APP_ID")
-    client_id = System.get_env("PAPERCUPS_HUBSPOT_CLIENT_ID")
-    client_secret = System.get_env("PAPERCUPS_HUBSPOT_CLIENT_SECRET")
+    # app_id = System.get_env("Hakerspeak_HUBSPOT_APP_ID")
+    client_id = System.get_env("Hakerspeak_HUBSPOT_CLIENT_ID")
+    client_secret = System.get_env("Hakerspeak_HUBSPOT_CLIENT_SECRET")
 
     [
       {Tesla.Middleware.BaseUrl, "https://api.hubapi.com"},

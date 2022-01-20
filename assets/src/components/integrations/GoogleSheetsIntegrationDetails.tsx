@@ -198,7 +198,7 @@ class GoogleSheetsIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              Linking Papercups with Google Sheets will enable you to start
+              Linking Hakerspeak with Google Sheets will enable you to start
               syncing your customer data to a spreadsheet instantaneously. It
               also will allow you to import customer data much more easily.
             </Text>

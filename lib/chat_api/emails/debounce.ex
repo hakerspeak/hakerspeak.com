@@ -66,7 +66,7 @@ defmodule ChatApi.Emails.Debounce do
   end
 
   def validate(email, true) do
-    get("/", query: [email: email, api: System.get_env("PAPERCUPS_DEBOUNCE_API_KEY")])
+    get("/", query: [email: email, api: System.get_env("Hakerspeak_DEBOUNCE_API_KEY")])
   end
 
   def validate(_email, false) do
@@ -78,7 +78,7 @@ defmodule ChatApi.Emails.Debounce do
 
   @spec has_valid_api_key?() :: boolean()
   defp has_valid_api_key?() do
-    case System.get_env("PAPERCUPS_DEBOUNCE_API_KEY") do
+    case System.get_env("Hakerspeak_DEBOUNCE_API_KEY") do
       nil -> false
       "" -> false
       _ -> true

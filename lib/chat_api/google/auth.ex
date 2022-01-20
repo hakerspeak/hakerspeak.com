@@ -5,10 +5,10 @@ defmodule ChatApi.Google.Auth do
   def client(params \\ []) do
     OAuth2.Client.new(
       strategy: __MODULE__,
-      client_id: System.get_env("PAPERCUPS_GOOGLE_CLIENT_ID"),
-      client_secret: System.get_env("PAPERCUPS_GOOGLE_CLIENT_SECRET"),
+      client_id: System.get_env("Hakerspeak_GOOGLE_CLIENT_ID"),
+      client_secret: System.get_env("Hakerspeak_GOOGLE_CLIENT_SECRET"),
       redirect_uri:
-        Keyword.get(params, :redirect_uri, System.get_env("PAPERCUPS_GOOGLE_REDIRECT_URI")),
+        Keyword.get(params, :redirect_uri, System.get_env("Hakerspeak_GOOGLE_REDIRECT_URI")),
       site: "https://accounts.google.com",
       authorize_url: "/o/oauth2/auth",
       token_url: "/o/oauth2/token"
@@ -19,8 +19,8 @@ defmodule ChatApi.Google.Auth do
   def refresh_client() do
     OAuth2.Client.new(
       strategy: OAuth2.Strategy.Refresh,
-      client_id: System.get_env("PAPERCUPS_GOOGLE_CLIENT_ID"),
-      client_secret: System.get_env("PAPERCUPS_GOOGLE_CLIENT_SECRET"),
+      client_id: System.get_env("Hakerspeak_GOOGLE_CLIENT_ID"),
+      client_secret: System.get_env("Hakerspeak_GOOGLE_CLIENT_SECRET"),
       site: "https://accounts.google.com",
       authorize_url: "/o/oauth2/auth",
       token_url: "/o/oauth2/token"

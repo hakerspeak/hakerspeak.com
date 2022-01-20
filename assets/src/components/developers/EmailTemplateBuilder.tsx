@@ -14,7 +14,7 @@ const Email = () => {
               Hey there!
             </Paragraph>
             <Paragraph>
-              Papercups v2.0 is out! Here are the biggest changes...
+              Hakerspeak v2.0 is out! Here are the biggest changes...
             </Paragraph>
 
             <H2>

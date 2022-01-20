@@ -162,7 +162,7 @@ class HubspotIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with HubSpot, you can easily view and sync
+              When you link Hakerspeak with HubSpot, you can easily view and sync
               data with your customers in HubSpot.
             </Text>
           </Card>

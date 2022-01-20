@@ -18,8 +18,8 @@ import * as API from '../../api';
 import logger from '../../logger';
 // Testing widget in separate package
 // import {Storytime} from '../../lib/storytime'; // For testing
-import {Storytime} from '@papercups-io/storytime';
-import ChatWidget from '@papercups-io/chat-widget';
+import {Storytime} from '@Hakerspeak-io/storytime';
+import ChatWidget from '@Hakerspeak-io/chat-widget';
 import {formatUserExternalId} from '../../utils';
 
 const {
@@ -50,7 +50,7 @@ class Demo extends React.Component<Props, State> {
 
     this.state = {
       color: defaultColor || colors.primary,
-      title: defaultTitle || 'Welcome to Papercups!',
+      title: defaultTitle || 'Welcome to Hakerspeak!',
       subtitle: defaultSubtitle || 'Ask us anything using the chat window 💭',
       accountId: REACT_APP_ADMIN_ACCOUNT_ID,
       inboxId: REACT_APP_ADMIN_INBOX_ID,

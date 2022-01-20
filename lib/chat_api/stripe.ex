@@ -9,7 +9,7 @@ defmodule ChatApi.StripeClient do
 
   @spec enabled? :: boolean()
   def enabled?() do
-    case System.get_env("PAPERCUPS_STRIPE_SECRET") do
+    case System.get_env("Hakerspeak_STRIPE_SECRET") do
       "sk_" <> _rest -> true
       _ -> false
     end

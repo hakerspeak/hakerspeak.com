@@ -24,7 +24,7 @@ defmodule ChatApi.Slack.Notification do
 
   @spec log(binary() | map()) :: :ok | Tesla.Env.result()
   def log(message) do
-    case System.get_env("PAPERCUPS_SLACK_WEBHOOK_URL") do
+    case System.get_env("Hakerspeak_SLACK_WEBHOOK_URL") do
       "https://hooks.slack.com/services/" <> _rest = url ->
         log(message, url)
 
@@ -366,16 +366,16 @@ defmodule ChatApi.Slack.Notification do
     end
   end
 
-  @papercups_app_name "Papercups"
-  @papercups_icon_url "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2021-01-05/1626939067681_3e27968eb3657d7167e5_132.png"
+  @Hakerspeak_app_name "Hakerspeak"
+  @Hakerspeak_icon_url "https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2021-01-05/1626939067681_3e27968eb3657d7167e5_132.png"
 
   @spec default_app_name() :: String.t()
   defp default_app_name() do
-    System.get_env("PAPERCUPS_APP_NAME", @papercups_app_name)
+    System.get_env("Hakerspeak_APP_NAME", @Hakerspeak_app_name)
   end
 
   @spec default_app_icon_url() :: String.t()
   defp default_app_icon_url() do
-    System.get_env("PAPERCUPS_APP_ICON_URL", @papercups_icon_url)
+    System.get_env("Hakerspeak_APP_ICON_URL", @Hakerspeak_icon_url)
   end
 end

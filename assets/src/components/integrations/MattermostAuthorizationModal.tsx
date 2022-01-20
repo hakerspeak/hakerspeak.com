@@ -169,7 +169,7 @@ const MattermostAuthorizationModal = ({
             <Text strong>self-hosted Mattermost</Text> instances. In order to
             get set up, please follow{' '}
             <a
-              href="https://docs.papercups.io/reply-from-mattermost"
+              href="https://docs.Hakerspeak.io/reply-from-mattermost"
               target="_blank"
               rel="noopener noreferrer"
             >

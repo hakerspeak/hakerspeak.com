@@ -42,7 +42,7 @@ const ForwardingAddressesTable = ({
       key: 'forwarding_email_address',
       render: (value: string) => {
         return (
-          <a href={`mailto:${value}?Subject=Papercups test email`}>{value}</a>
+          <a href={`mailto:${value}?Subject=Hakerspeak test email`}>{value}</a>
         );
       },
     },
@@ -247,7 +247,7 @@ class ForwardingAddressesOverview extends React.Component<Props, State> {
 
         <Box mb={4}>
           <Paragraph>
-            Use forwarding email addresses to forward messages into Papercups.
+            Use forwarding email addresses to forward messages into Hakerspeak.
           </Paragraph>
         </Box>
 

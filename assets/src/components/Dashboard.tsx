@@ -9,9 +9,9 @@ import {
 } from 'react-router-dom';
 import {Helmet} from 'react-helmet';
 import {Box, Flex} from 'theme-ui';
-import {ChatWidget, Papercups} from '@papercups-io/chat-widget';
+import {ChatWidget, Hakerspeak} from '@Hakerspeak-io/chat-widget';
 // import {Storytime} from '../lib/storytime'; // For testing
-import {Storytime} from '@papercups-io/storytime';
+import {Storytime} from '@Hakerspeak-io/storytime';
 import {colors, Layout, Menu, Sider} from './common';
 import {
   ApiOutlined,
@@ -159,7 +159,7 @@ const ChatWithUs = ({
         greeting="Hi there! Send us a message and we'll get back to you as soon as we can."
         primaryColor="#1890ff"
         hideToggleButton
-        baseUrl="https://app.papercups-eu.io"
+        baseUrl="https://app.Hakerspeak-eu.io"
         customer={{
           external_id: formatUserExternalId(currentUser),
           email: currentUser.email,
@@ -443,7 +443,7 @@ const Dashboard = (props: RouteComponentProps) => {
                   title="Chat with us!"
                   icon={<SmileOutlined />}
                   key="chat"
-                  onClick={Papercups.toggle}
+                  onClick={Hakerspeak.toggle}
                 >
                   Chat with us!
                 </Menu.Item>

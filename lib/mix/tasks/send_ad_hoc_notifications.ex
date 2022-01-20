@@ -39,7 +39,7 @@ defmodule Mix.Tasks.SendAdHocNotifications do
   """
 
   # TODO: use founders@
-  @papercups_email "founders@papercups.io"
+  @Hakerspeak_email "founders@Hakerspeak.io"
 
   def run([]) do
     Logger.error("""
@@ -196,7 +196,7 @@ defmodule Mix.Tasks.SendAdHocNotifications do
 
   def notify(text, account_id, dry_run: true) do
     with %{company_name: company_name} <- Accounts.get_account!(account_id),
-         %Customer{id: customer_id} <- Customers.find_by_email(@papercups_email, account_id),
+         %Customer{id: customer_id} <- Customers.find_by_email(@Hakerspeak_email, account_id),
          :ok <- validate(text, account_id: account_id, customer_id: customer_id) do
       Logger.info("[--dry_run] Would have sent to #{company_name}: #{inspect(text)}")
     else
@@ -207,8 +207,8 @@ defmodule Mix.Tasks.SendAdHocNotifications do
   def notify(text, account_id, _opts) do
     with %{company_name: company_name} <- Accounts.get_account!(account_id),
          {:ok, customer} <-
-           Customers.create_or_update_by_email(@papercups_email, account_id, %{
-             name: "Papercups Team",
+           Customers.create_or_update_by_email(@Hakerspeak_email, account_id, %{
+             name: "Hakerspeak Team",
              profile_photo_url:
                "https://avatars.slack-edge.com/2021-01-13/1619416452487_002cddd7d8aea1950018_192.png"
            }),

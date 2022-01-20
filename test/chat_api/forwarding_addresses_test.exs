@@ -51,10 +51,10 @@ defmodule ChatApi.ForwardingAddressesTest do
       attrs =
         params_with_assocs(:forwarding_address,
           account: account,
-          forwarding_email_address: "test@chat.papercups.io"
+          forwarding_email_address: "test@chat.Hakerspeak.io"
         )
 
-      assert {:ok, %ForwardingAddress{forwarding_email_address: "test@chat.papercups.io"}} =
+      assert {:ok, %ForwardingAddress{forwarding_email_address: "test@chat.Hakerspeak.io"}} =
                ForwardingAddresses.create_forwarding_address(attrs)
     end
 

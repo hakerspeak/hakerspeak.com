@@ -437,7 +437,7 @@ defmodule ChatApi.Reporting do
   end
 
   defp exclude_admin_account(query, field \\ :account_id) do
-    case System.get_env("PAPERCUPS_ADMIN_ACCOUNT_ID") do
+    case System.get_env("Hakerspeak_ADMIN_ACCOUNT_ID") do
       nil ->
         query
 
@@ -467,7 +467,7 @@ defmodule ChatApi.Reporting do
   @spec list_active_accounts(map()) :: list()
   def list_active_accounts(filters \\ %{}) do
     filters
-    # Result looks like [%{count: 1678, account: %{company_name: "Papercups", id: "a1b2c3"}}]
+    # Result looks like [%{count: 1678, account: %{company_name: "Hakerspeak", id: "a1b2c3"}}]
     |> group_messages_by_account()
     |> Enum.filter(fn r -> r.count > 0 end)
     |> Enum.sort_by(fn r -> r.count end, :desc)
@@ -496,7 +496,7 @@ defmodule ChatApi.Reporting do
     WidgetSetting
     |> where(^filter_where(filters))
     |> exclude_admin_account()
-    |> where([w], not ilike(w.host, "papercups"))
+    |> where([w], not ilike(w.host, "Hakerspeak"))
     |> where([w], not ilike(w.host, "localhost"))
     |> select([w], count(w.id))
     |> Repo.one()

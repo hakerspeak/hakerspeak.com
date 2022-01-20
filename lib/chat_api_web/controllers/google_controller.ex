@@ -162,14 +162,14 @@ defmodule ChatApiWeb.GoogleController do
 
   @spec get_redirect_uri(map() | binary()) :: String.t() | nil
   defp get_redirect_uri(type) when is_binary(type) do
-    default_redirect_uri = System.get_env("PAPERCUPS_GOOGLE_REDIRECT_URI")
+    default_redirect_uri = System.get_env("Hakerspeak_GOOGLE_REDIRECT_URI")
 
     case type do
       "support" ->
-        System.get_env("PAPERCUPS_SUPPORT_GMAIL_REDIRECT_URI", default_redirect_uri)
+        System.get_env("Hakerspeak_SUPPORT_GMAIL_REDIRECT_URI", default_redirect_uri)
 
       "personal" ->
-        System.get_env("PAPERCUPS_PERSONAL_GMAIL_REDIRECT_URI", default_redirect_uri)
+        System.get_env("Hakerspeak_PERSONAL_GMAIL_REDIRECT_URI", default_redirect_uri)
 
       _ ->
         default_redirect_uri
@@ -179,7 +179,7 @@ defmodule ChatApiWeb.GoogleController do
   defp get_redirect_uri(params) when is_map(params),
     do: params |> Map.get("type") |> get_redirect_uri()
 
-  defp get_redirect_uri(_), do: System.get_env("PAPERCUPS_GOOGLE_REDIRECT_URI")
+  defp get_redirect_uri(_), do: System.get_env("Hakerspeak_GOOGLE_REDIRECT_URI")
 
   @spec should_enable_gmail_sync?(GoogleAuthorization.t()) :: boolean()
   defp should_enable_gmail_sync?(%GoogleAuthorization{client: "gmail", type: "support"}), do: true

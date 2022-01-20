@@ -900,9 +900,9 @@ defmodule ChatApi.SlackTest do
                  authorization
                )
 
-      assert "[alex123+papercups@test.com](mailto:alex123+papercups@test.com)" =
+      assert "[alex123+Hakerspeak@test.com](mailto:alex123+Hakerspeak@test.com)" =
                Slack.Helpers.sanitize_slack_message(
-                 "<mailto:alex123+papercups@test.com|alex123+papercups@test.com>",
+                 "<mailto:alex123+Hakerspeak@test.com|alex123+Hakerspeak@test.com>",
                  authorization
                )
     end
@@ -914,7 +914,7 @@ defmodule ChatApi.SlackTest do
       [
         "Hi there!",
         "<this is not a link or user ID>",
-        "@papercups is awesome",
+        "@Hakerspeak is awesome",
         "Yo | yo | yo",
         "<links-must-start-with-http.com>",
         # TODO: add support for formatting this one:
@@ -971,7 +971,7 @@ defmodule ChatApi.SlackTest do
       [
         "Hi there!",
         "<this is not a link or user ID>",
-        "@papercups is awesome",
+        "@Hakerspeak is awesome",
         "Yo | yo | yo",
         "<links-must-start-with-http.com>",
         "<#C123> is a link to a channel"
@@ -982,28 +982,28 @@ defmodule ChatApi.SlackTest do
     end
 
     test "Helpers.find_slack_links/1 extracts links in a Slack message" do
-      assert ["<http://papercups.io|www.papercups.io>"] =
+      assert ["<http://Hakerspeak.io|www.Hakerspeak.io>"] =
                Slack.Helpers.find_slack_links(
-                 "Check out our website: <http://papercups.io|www.papercups.io>"
+                 "Check out our website: <http://Hakerspeak.io|www.Hakerspeak.io>"
                )
 
       assert [
-               "<https://papercups.io>",
-               "<http://papercups.io|papercups.io>",
-               "<http://papercups.io|www.papercups.io>"
+               "<https://Hakerspeak.io>",
+               "<http://Hakerspeak.io|Hakerspeak.io>",
+               "<http://Hakerspeak.io|www.Hakerspeak.io>"
              ] =
                Slack.Helpers.find_slack_links("""
                Check out my favorite links:
-               - <https://papercups.io> and
-               - <http://papercups.io|papercups.io> and
-               - <http://papercups.io|www.papercups.io>
+               - <https://Hakerspeak.io> and
+               - <http://Hakerspeak.io|Hakerspeak.io> and
+               - <http://Hakerspeak.io|www.Hakerspeak.io>
                """)
 
       # All these should have no matches
       [
         "Hi there!",
         "<this is not a link or user ID>",
-        "@papercups is awesome",
+        "@Hakerspeak is awesome",
         "Yo | yo | yo",
         "<links-must-start-with-http.com>",
         "<#C123> is a link to a channel"
@@ -1031,7 +1031,7 @@ defmodule ChatApi.SlackTest do
       [
         "Hi there!",
         "<this is not a link or user ID>",
-        "@papercups is awesome",
+        "@Hakerspeak is awesome",
         "Yo | yo | yo",
         "<links-must-start-with-http.com>",
         "<#C123> is a link to a channel"
@@ -1048,26 +1048,26 @@ defmodule ChatApi.SlackTest do
 
       assert %{
                mentions: ["<@UABC123>"],
-               links: ["<https://papercups.io|papercups.io>"]
+               links: ["<https://Hakerspeak.io|Hakerspeak.io>"]
              } =
                Slack.Helpers.get_slack_message_metadata(
-                 "Hi there <@UABC123>! Check out our website <https://papercups.io|papercups.io>"
+                 "Hi there <@UABC123>! Check out our website <https://Hakerspeak.io|Hakerspeak.io>"
                )
 
       assert %{
-               links: ["<https://papercups.io|papercups.io>"],
-               mailto_links: ["<mailto:alex@papercups.io|alex@papercups.io>"],
+               links: ["<https://Hakerspeak.io|Hakerspeak.io>"],
+               mailto_links: ["<mailto:alex@Hakerspeak.io|alex@Hakerspeak.io>"],
                mentions: ["<@UABC123>"]
              } =
                Slack.Helpers.get_slack_message_metadata(
-                 "Hi there <@UABC123>! Check out our website <https://papercups.io|papercups.io> or email us at <mailto:alex@papercups.io|alex@papercups.io>"
+                 "Hi there <@UABC123>! Check out our website <https://Hakerspeak.io|Hakerspeak.io> or email us at <mailto:alex@Hakerspeak.io|alex@Hakerspeak.io>"
                )
 
       # All these should have no metadata
       [
         "Hi there!",
         "<this is not a link or user ID>",
-        "@papercups is awesome",
+        "@Hakerspeak is awesome",
         "Yo | yo | yo",
         "<links-must-start-with-http.com>",
         "<#C123> is a link to a channel"
@@ -1136,7 +1136,7 @@ defmodule ChatApi.SlackTest do
           "text" => "*Name:*\nAnonymous User"
         },
         %{
-          "text" => "*URL:*\nwww.papercups.io"
+          "text" => "*URL:*\nwww.Hakerspeak.io"
         },
         %{
           "text" => "*Timezone:*\nNew York"
@@ -1151,7 +1151,7 @@ defmodule ChatApi.SlackTest do
 
       assert [
                %{"text" => "*Name:*\nAnonymous User"},
-               %{"text" => "*URL:*\nwww.papercups.io"},
+               %{"text" => "*URL:*\nwww.Hakerspeak.io"},
                %{"text" => "*Timezone:*\nNew York"},
                %{"text" => "*Status:*\n:wave: Unhandled"}
              ] = latest_fields
@@ -1164,7 +1164,7 @@ defmodule ChatApi.SlackTest do
 
       assert [
                %{"text" => "*Name:*\nAnonymous User"},
-               %{"text" => "*URL:*\nwww.papercups.io"},
+               %{"text" => "*URL:*\nwww.Hakerspeak.io"},
                %{"text" => "*Timezone:*\nNew York"},
                %{"text" => "*Status:*\n:speech_balloon: In progress"}
              ] = latest_fields
@@ -1177,7 +1177,7 @@ defmodule ChatApi.SlackTest do
 
       assert [
                %{"text" => "*Name:*\nAnonymous User"},
-               %{"text" => "*URL:*\nwww.papercups.io"},
+               %{"text" => "*URL:*\nwww.Hakerspeak.io"},
                %{"text" => "*Timezone:*\nNew York"},
                %{"text" => "*Status:*\n:white_check_mark: Closed"}
              ] = latest_fields

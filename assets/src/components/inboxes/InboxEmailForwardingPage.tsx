@@ -43,7 +43,7 @@ const ForwardingAddressesTable = ({
       key: 'forwarding_email_address',
       render: (value: string) => {
         return (
-          <a href={`mailto:${value}?Subject=Papercups test email`}>{value}</a>
+          <a href={`mailto:${value}?Subject=Hakerspeak test email`}>{value}</a>
         );
       },
     },
@@ -268,7 +268,7 @@ class InboxEmailForwardingPage extends React.Component<Props, State> {
         <Box mb={4}>
           <Paragraph>
             Use forwarding email addresses to forward messages into{' '}
-            {inbox ? `the ${inbox.name}` : 'Papercups'}.
+            {inbox ? `the ${inbox.name}` : 'Hakerspeak'}.
           </Paragraph>
         </Box>
 

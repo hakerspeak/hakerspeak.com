@@ -172,7 +172,7 @@ export class CodeSandbox extends React.Component<Props, State> {
           <RunKitWrapper
             source={code || WEBHOOK_HANDLER_SOURCE}
             mode="endpoint"
-            environment={[{name: 'PAPERCUPS_API_KEY', value: personalApiKey}]}
+            environment={[{name: 'Hakerspeak_API_KEY', value: personalApiKey}]}
             minHeight={runkitIframeHeight}
             nodeVersion="14.x.x"
             onLoad={this.handleRunKitLoaded}

@@ -93,7 +93,7 @@ defmodule ChatApi.Factory do
     %ChatApi.ForwardingAddresses.ForwardingAddress{
       account: build(:account),
       forwarding_email_address:
-        sequence(:forwarding_email_address, &"forwarding-#{&1}@chat.papercups.io"),
+        sequence(:forwarding_email_address, &"forwarding-#{&1}@chat.Hakerspeak.io"),
       source_email_address: "source@company.com",
       description: "some description",
       state: "some state"

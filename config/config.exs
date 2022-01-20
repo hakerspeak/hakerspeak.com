@@ -48,7 +48,7 @@ config :pow, Pow.Postgres.Store,
 config :joken,
   rs256: [
     signer_alg: "RS256",
-    key_pem: System.get_env("PAPERCUPS_GITHUB_PEM")
+    key_pem: System.get_env("Hakerspeak_GITHUB_PEM")
   ]
 
 config :chat_api, :pow,

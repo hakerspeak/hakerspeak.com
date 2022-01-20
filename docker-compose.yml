@@ -1,8 +1,8 @@
 version: "3.2"
 
 services:
-  papercups:
-    image: papercups/papercups:latest
+  Hakerspeak:
+    image: Hakerspeak/Hakerspeak:latest
     restart: always
     ports:
       - "3000:3000"
@@ -19,11 +19,11 @@ services:
       REQUIRE_DB_SSL: "false"
       REACT_APP_FILE_UPLOADS_ENABLED: 1
       # Replace with your domain name
-      REACT_APP_URL: "app.papercups.io"
+      REACT_APP_URL: "app.Hakerspeak.io"
   db:
     image: postgres:alpine
     restart: always
-    container_name: papercups
+    container_name: Hakerspeak
     ports:
       - "5432:5432"
     environment:

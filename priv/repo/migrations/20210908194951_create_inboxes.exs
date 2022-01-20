@@ -154,7 +154,7 @@ defmodule ChatApi.Repo.Migrations.CreateInboxes do
           account_id: account.id,
           name: "Primary Inbox",
           description:
-            "This is the primary Papercups inbox for #{account.company_name}. All messages will flow into here by default.",
+            "This is the primary Hakerspeak inbox for #{account.company_name}. All messages will flow into here by default.",
           is_primary: true,
           is_private: false
         })

@@ -35,7 +35,7 @@ if config_env() === :prod do
     System.get_env("BACKEND_URL") ||
       raise """
       environment variable BACKEND_URL is missing.
-      For example: myselfhostedwebsite.com or papercups.io
+      For example: myselfhostedwebsite.com or Hakerspeak.io
       """
 
   # Configure your database
@@ -140,14 +140,14 @@ config :customerio,
 
 aws_key_id = System.get_env("AWS_ACCESS_KEY_ID")
 aws_secret_key = System.get_env("AWS_SECRET_ACCESS_KEY")
-bucket_name = System.get_env("BUCKET_NAME", "papercups-files")
+bucket_name = System.get_env("BUCKET_NAME", "Hakerspeak-files")
 region = System.get_env("AWS_REGION")
 function_bucket_name = System.get_env("FUNCTION_BUCKET_NAME", "")
 function_role = System.get_env("FUNCTION_ROLE", "")
 aws_account_id = System.get_env("AWS_ACCOUNT_ID", "")
 ses_bucket_name = System.get_env("SES_BUCKET_NAME", "")
 ses_region = System.get_env("SES_REGION", "")
-ses_forwarding_domain = System.get_env("SES_FORWARDING_DOMAIN", "chat.papercups.io")
+ses_forwarding_domain = System.get_env("SES_FORWARDING_DOMAIN", "chat.Hakerspeak.io")
 
 config :chat_api,
   bucket_name: bucket_name,
@@ -177,7 +177,7 @@ if System.get_env("APPSIGNAL_API_KEY") do
     active: true
 end
 
-case System.get_env("PAPERCUPS_STRIPE_SECRET") do
+case System.get_env("Hakerspeak_STRIPE_SECRET") do
   "sk_" <> _rest = api_key ->
     config :stripity_stripe, api_key: api_key
 

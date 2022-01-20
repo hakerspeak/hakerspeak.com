@@ -38,11 +38,11 @@ defmodule ChatApiWeb.CSVHelpersTest do
   end
 
   test "nil columns should encode as empty string" do
-    data = CSVHelpers.dump_csv_rfc4180([%{data: nil, name: "papercups"}], [:name, :data])
+    data = CSVHelpers.dump_csv_rfc4180([%{data: nil, name: "Hakerspeak"}], [:name, :data])
 
     assert data ==
              "name,data\r\n" <>
-               "\"papercups\",\"\""
+               "\"Hakerspeak\",\"\""
   end
 
   test "unreferenced columns should not get encoded" do

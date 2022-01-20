@@ -127,7 +127,7 @@ defmodule ChatApiWeb.RegistrationController do
         account_id: account.id,
         name: "Primary Inbox",
         description:
-          "This is the primary Papercups inbox for #{account.company_name}. All messages will flow into here by default.",
+          "This is the primary Hakerspeak inbox for #{account.company_name}. All messages will flow into here by default.",
         is_primary: true,
         is_private: false
       })
@@ -145,7 +145,7 @@ defmodule ChatApiWeb.RegistrationController do
   @spec default_subscription_plan() :: String.t()
   defp default_subscription_plan() do
     case System.get_env("BACKEND_URL", "") do
-      "app.papercups.io" -> "starter"
+      "app.Hakerspeak.io" -> "starter"
       _ -> "team"
     end
   end
@@ -224,7 +224,7 @@ defmodule ChatApiWeb.RegistrationController do
 
   @spec registration_disabled?() :: boolean()
   defp registration_disabled?() do
-    case System.get_env("PAPERCUPS_REGISTRATION_DISABLED") do
+    case System.get_env("Hakerspeak_REGISTRATION_DISABLED") do
       x when x == "1" or x == "true" -> true
       _ -> false
     end

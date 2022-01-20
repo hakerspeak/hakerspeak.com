@@ -4,7 +4,7 @@ const Paragraph = (props) => {
   const {children, align = 'left'} = props;
 
   return (
-    <p className={\`papercups-align-\${align}\`} align={align}>
+    <p className={\`Hakerspeak-align-\${align}\`} align={align}>
       {children}
     </p>
   )
@@ -14,7 +14,7 @@ const H2 = (props) => {
   const {children, align = 'left'} = props;
 
   return (
-    <h2 className={\`papercups-align-\${align}\`} align={align}>
+    <h2 className={\`Hakerspeak-align-\${align}\`} align={align}>
       {children}
     </h2>
   )

@@ -81,7 +81,7 @@ const getStepsMetadata = (
       text: (
         <>
           <Text strong>Connect more integrations</Text> to make the most of
-          Papercups.
+          Hakerspeak.
         </>
       ),
     },

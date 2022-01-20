@@ -345,7 +345,7 @@ defmodule ChatApiWeb.SlackControllerTest do
 
       slack_bot_user = %{
         "id" => "B123",
-        "name" => "Papercups Bot"
+        "name" => "Hakerspeak Bot"
       }
 
       slack_bot_message = %{
@@ -657,7 +657,7 @@ defmodule ChatApiWeb.SlackControllerTest do
       event_params = %{
         "type" => "message",
         "subtype" => "channel_join",
-        "text" => "@papercups has joined the channel",
+        "text" => "@Hakerspeak has joined the channel",
         "channel" => channel_id,
         "team" => authorization.team_id,
         "user" => authorization.bot_user_id,
@@ -695,7 +695,7 @@ defmodule ChatApiWeb.SlackControllerTest do
       event_params = %{
         "type" => "message",
         "subtype" => "group_join",
-        "text" => "@papercups has joined the channel",
+        "text" => "@Hakerspeak has joined the channel",
         "channel" => channel_id,
         "team" => authorization.team_id,
         "user" => authorization.bot_user_id,
@@ -733,7 +733,7 @@ defmodule ChatApiWeb.SlackControllerTest do
       event_params = %{
         "type" => "message",
         "subtype" => "channel_join",
-        "text" => "@papercups has joined the channel",
+        "text" => "@Hakerspeak has joined the channel",
         "channel" => authorization.channel_id,
         "team" => authorization.team_id,
         "user" => authorization.bot_user_id,

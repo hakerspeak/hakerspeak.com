@@ -56,13 +56,13 @@ export const DEFAULT_ENDPOINT_PREAMBLE = `
 `;
 
 export const DEFAULT_RUNKIT_SOURCE = `
-const papercups = require('@papercups-io/papercups')(
-  process.env.PAPERCUPS_API_KEY,
+const Hakerspeak = require('@Hakerspeak-io/Hakerspeak')(
+  process.env.Hakerspeak_API_KEY,
   {host: "${window.location.origin}"}
 );
 
 async function run(params = {}) {
-  const customers = await papercups.customers.list({
+  const customers = await Hakerspeak.customers.list({
     limit: 3
   });
   
@@ -71,22 +71,22 @@ async function run(params = {}) {
 `.trim();
 
 export const WEBHOOK_HANDLER_SOURCE = `
-// See https://github.com/papercups-io/papercups-node#usage
-const papercups = require('@papercups-io/papercups')(
-  process.env.PAPERCUPS_API_KEY,
+// See https://github.com/Hakerspeak-io/Hakerspeak-node#usage
+const Hakerspeak = require('@Hakerspeak-io/Hakerspeak')(
+  process.env.Hakerspeak_API_KEY,
   {host: '${window.location.origin}'}
 );
 
 // This function will be exported to handle incoming webhook events!
 async function handler({event, payload}) {
   switch (event) {
-    // See https://docs.papercups.io/webhook-events#messagecreated
+    // See https://docs.Hakerspeak.io/webhook-events#messagecreated
     case 'message:created':
       const {body, conversation_id} = payload;
 
       // Sends an auto-response to incoming messages
-      // See https://docs.papercups.io/api-endpoints#messages
-      return papercups.messages.create({
+      // See https://docs.Hakerspeak.io/api-endpoints#messages
+      return Hakerspeak.messages.create({
         body: getResponseMessage(body),
         type: 'bot',
         conversation_id,
@@ -102,7 +102,7 @@ function getResponseMessage(text) {
   if (formatted.includes('test')) {
     return 'Test successful!';
   } else if (formatted.includes('pricing')) {
-    return 'Check out our pricing at [papercups.io/pricing](https://papercups.io/pricing)';
+    return 'Check out our pricing at [Hakerspeak.io/pricing](https://Hakerspeak.io/pricing)';
   } else {
     return \`This is the default message. Received: "\${text}"\`;
   }

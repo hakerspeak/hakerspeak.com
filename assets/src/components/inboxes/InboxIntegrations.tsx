@@ -180,7 +180,7 @@ class InboxIntegrations extends React.Component<Props, State> {
     });
     const {count = 0} = await API.countAllConversations({inbox_id: inboxId});
     const {id: widgetSettingsId, created_at: createdAt} = widgetSettings;
-    const description = 'Chat with users on your website via Papercups.';
+    const description = 'Chat with users on your website via Hakerspeak.';
     const isConnected = count > 0;
 
     return {
@@ -250,7 +250,7 @@ class InboxIntegrations extends React.Component<Props, State> {
     const description =
       auth && auth.channel && auth.team_name
         ? `Connected to ${auth.channel} in ${auth.team_name}.`
-        : 'Sync messages from your Slack channels with Papercups.';
+        : 'Sync messages from your Slack channels with Hakerspeak.';
 
     return {
       key: 'slack:sync',
@@ -279,7 +279,7 @@ class InboxIntegrations extends React.Component<Props, State> {
       createdAt: auth ? auth.created_at : null,
       authorizationId: auth ? auth.id : null,
       icon: '/gmail.svg',
-      description: 'Sync messages from your Gmail inbox with Papercups.',
+      description: 'Sync messages from your Gmail inbox with Hakerspeak.',
       configurationUrl: `/inboxes/${inboxId}/integrations/google/gmail`,
     };
   };
@@ -297,7 +297,7 @@ class InboxIntegrations extends React.Component<Props, State> {
       authorizationId: first ? first.id : null,
       icon: '/ses.svg',
       isPopular: true,
-      description: 'Set up email forwarding into Papercups.',
+      description: 'Set up email forwarding into Hakerspeak.',
       configurationUrl: `/inboxes/${inboxId}/email-forwarding`,
     };
   };

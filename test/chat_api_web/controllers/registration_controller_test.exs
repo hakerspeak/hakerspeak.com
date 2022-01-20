@@ -9,7 +9,7 @@ defmodule ChatApiWeb.RegistrationControllerTest do
   describe "create/2" do
     @valid_params %{
       "user" => %{
-        "company_name" => "Papercups",
+        "company_name" => "Hakerspeak",
         "email" => "test@example.com",
         "password" => @password,
         "password_confirmation" => @password

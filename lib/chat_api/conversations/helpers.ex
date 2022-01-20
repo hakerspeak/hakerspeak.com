@@ -19,7 +19,7 @@ defmodule ChatApi.Conversations.Helpers do
           inbox_id: inbox_id
         } = conversation
       ) do
-    # TODO: we need to ensure that the Papercups app is added to the channel manually before this can work
+    # TODO: we need to ensure that the Hakerspeak app is added to the channel manually before this can work
     with %{channel_id: channel, access_token: access_token} <-
            SlackAuthorizations.get_authorization_by_account(account_id, %{
              type: "reply",

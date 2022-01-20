@@ -28,7 +28,7 @@ defmodule Mix.Tasks.SetMissingSlackUserIds do
     #   1. We fetch all Slack authorizations and group them by account
     #   2. We look for an authorization with the correct scopes for retrieving user info
     #   3. If a valid authorization is found, we use this to fetch the Slack users for the account
-    #   4. Then, we compare the email field on the Slack user objects with the internal Papercups users' emails
+    #   4. Then, we compare the email field on the Slack user objects with the internal Hakerspeak users' emails
     #   5. If we find a match, we update the user's `slack_user_id` field on their profile
     #
     ChatApi.SlackAuthorizations.list_slack_authorizations()

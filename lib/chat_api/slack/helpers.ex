@@ -859,7 +859,7 @@ defmodule ChatApi.Slack.Helpers do
     #{content}
 
     > Reply to this thread to respond to this email, or view in the #{dashboard_link} :rocket:
-    > (Start a message with `;;` or `\\\\` to send an <https://github.com/papercups-io/papercups/pull/562|internal note>.)
+    > (Start a message with `;;` or `\\\\` to send an <https://github.com/Hakerspeak-io/Hakerspeak/pull/562|internal note>.)
     """
   end
 
@@ -881,7 +881,7 @@ defmodule ChatApi.Slack.Helpers do
     [
       formatted_text,
       "Reply to this thread to start chatting, or view in the #{dashboard_link} :rocket:",
-      "(Start a message with `;;` or `\\\\` to send an <https://github.com/papercups-io/papercups/pull/562|internal note>.)"
+      "(Start a message with `;;` or `\\\\` to send an <https://github.com/Hakerspeak-io/Hakerspeak/pull/562|internal note>.)"
     ]
     |> Enum.reject(&is_nil/1)
     |> Enum.join("\n\n")
@@ -1210,7 +1210,7 @@ defmodule ChatApi.Slack.Helpers do
        }) do
     # TODO: figure out a better way to enable feature flags for certain accounts,
     # or just make this configurable in account settings (or something like that)
-    case System.get_env("PAPERCUPS_FEATURE_FLAGGED_ACCOUNTS") do
+    case System.get_env("Hakerspeak_FEATURE_FLAGGED_ACCOUNTS") do
       ids when is_binary(ids) -> ids |> String.split(" ") |> Enum.member?(account_id)
       _ -> false
     end

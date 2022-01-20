@@ -85,7 +85,7 @@ defmodule ChatApiWeb.OnboardingStatusController do
     |> Enum.any?(fn settings ->
       case settings.host do
         host when is_binary(host) ->
-          !String.contains?(host, ["papercups", "localhost", "127.0.0.1"])
+          !String.contains?(host, ["Hakerspeak", "localhost", "127.0.0.1"])
 
         _ ->
           false

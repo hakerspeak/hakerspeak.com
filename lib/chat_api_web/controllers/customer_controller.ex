@@ -225,7 +225,7 @@ defmodule ChatApiWeb.CustomerController do
 
   @spec ip_collection_enabled?() :: boolean()
   defp ip_collection_enabled?() do
-    case System.get_env("PAPERCUPS_IP_COLLECTION_ENABLED") do
+    case System.get_env("Hakerspeak_IP_COLLECTION_ENABLED") do
       x when x == "1" or x == "true" -> true
       _ -> false
     end

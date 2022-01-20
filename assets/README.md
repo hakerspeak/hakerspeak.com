@@ -1,6 +1,6 @@
-# Papercups UI
+# Hakerspeak UI
 
-The React frontend for Papercups
+The React frontend for Hakerspeak
 
 ## Node Version:
 

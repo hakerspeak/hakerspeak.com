@@ -170,7 +170,7 @@ class MattermostIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with Mattermost, all new incoming messages
+              When you link Hakerspeak with Mattermost, all new incoming messages
               will be forwarded to the Mattermost channel of your choosing. From
               the comfort of your team's Mattermost workspace, you can easily
               reply to conversations with your users.

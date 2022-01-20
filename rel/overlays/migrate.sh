@@ -3,4 +3,4 @@
 
 BIN_DIR=`dirname "$0"`
 
-${BIN_DIR}/bin/papercups eval ChatApi.Release.migrate
+${BIN_DIR}/bin/Hakerspeak eval ChatApi.Release.migrate

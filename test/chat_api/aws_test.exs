@@ -42,10 +42,10 @@ defmodule ChatApi.AwsTest do
 
     test "get_file_url/2 formats the s3 file url" do
       filename = "test-file.jpg"
-      bucket = "papercups"
+      bucket = "Hakerspeak"
 
       assert Aws.get_file_url(filename, bucket) ==
-               "https://papercups.s3.amazonaws.com/test-file.jpg"
+               "https://Hakerspeak.s3.amazonaws.com/test-file.jpg"
     end
   end
 
@@ -87,7 +87,7 @@ defmodule ChatApi.AwsTest do
 
       %{"FunctionName" => ^function_name} =
         Aws.create_function_by_code(code, function_name, %{
-          "env" => %{"PAPERCUPS_API_KEY" => api_key}
+          "env" => %{"Hakerspeak_API_KEY" => api_key}
         })
 
       %{"body" => body, "statusCode" => status_code} =
@@ -122,13 +122,13 @@ defmodule ChatApi.AwsTest do
 
       code = """
       exports.handler = async (event) => {
-        return {statusCode: 200, body: JSON.stringify(process.env.PAPERCUPS_API_KEY)};
+        return {statusCode: 200, body: JSON.stringify(process.env.Hakerspeak_API_KEY)};
       };
       """
 
       %{"FunctionName" => ^function_name} =
         Aws.create_function_by_code(code, function_name, %{
-          "env" => %{"PAPERCUPS_API_KEY" => api_key}
+          "env" => %{"Hakerspeak_API_KEY" => api_key}
         })
 
       %{"body" => body} = Aws.invoke_lambda_function(function_name, %{"hello" => "world"})
@@ -137,7 +137,7 @@ defmodule ChatApi.AwsTest do
       new_api_key = "NEW_API_KEY"
 
       Aws.update_function_configuration(function_name, %{
-        "env" => %{"PAPERCUPS_API_KEY" => new_api_key}
+        "env" => %{"Hakerspeak_API_KEY" => new_api_key}
       })
 
       %{"body" => body} = Aws.invoke_lambda_function(function_name, %{"hello" => "world"})

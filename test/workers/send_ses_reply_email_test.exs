@@ -31,7 +31,7 @@ defmodule ChatApi.SendSesReplyEmailTest do
         "ses_message_id" => "<previous@email.amazonses.com>",
         "ses_references" => "<reference@email.amazonses.com>",
         "ses_subject" => "Test subject line",
-        "ses_from" => "test@papercups.io"
+        "ses_from" => "test@Hakerspeak.io"
       }
 
       with_mock ChatApi.Aws,
@@ -42,7 +42,7 @@ defmodule ChatApi.SendSesReplyEmailTest do
                  ChatApi.Workers.SendSesReplyEmail.send_email_via_ses(message, metadata)
 
         assert %{
-                 "ses_from" => "test@papercups.io",
+                 "ses_from" => "test@Hakerspeak.io",
                  "ses_in_reply_to" => "<previous@email.amazonses.com>",
                  "ses_message_id" => "<some_message_id@email.amazonses.com>",
                  "ses_references" =>
@@ -52,13 +52,13 @@ defmodule ChatApi.SendSesReplyEmailTest do
 
         assert_called(
           ChatApi.Aws.send_email(%{
-            from: "Test Co Team <mailer@chat.papercups.io>",
+            from: "Test Co Team <mailer@chat.Hakerspeak.io>",
             in_reply_to: "<previous@email.amazonses.com>",
             references: "<reference@email.amazonses.com> <previous@email.amazonses.com>",
-            reply_to: "reply+#{conversation.id}@chat.papercups.io",
+            reply_to: "reply+#{conversation.id}@chat.Hakerspeak.io",
             subject: "Test subject line",
             text: "some message body",
-            to: "test@papercups.io"
+            to: "test@Hakerspeak.io"
           })
         )
       end
@@ -94,7 +94,7 @@ defmodule ChatApi.SendSesReplyEmailTest do
           "ses_message_id" => "<previous@email.amazonses.com>",
           "ses_references" => "<reference@email.amazonses.com>",
           "ses_subject" => "Test subject line",
-          "ses_from" => "test@papercups.io"
+          "ses_from" => "test@Hakerspeak.io"
         }
 
         assert {:ok, _} = ChatApi.Workers.SendSesReplyEmail.send_email_via_ses(message, metadata)

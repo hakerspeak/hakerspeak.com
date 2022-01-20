@@ -386,7 +386,7 @@ class UserProfile extends React.Component<Props, State> {
             <Box mb={3} sx={{maxWidth: 480}}>
               <Paragraph>
                 By linking your Gmail account, you can send emails directly from
-                Papercups.
+                Hakerspeak.
               </Paragraph>
             </Box>
 

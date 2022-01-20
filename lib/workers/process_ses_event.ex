@@ -227,7 +227,7 @@ defmodule ChatApi.Workers.ProcessSesEvent do
 
   @spec find_forwarding_address(binary()) :: ForwardingAddress.t() | nil
   def find_forwarding_address(email) do
-    domain = Application.get_env(:chat_api, :ses_forwarding_domain, "chat.papercups.io")
+    domain = Application.get_env(:chat_api, :ses_forwarding_domain, "chat.Hakerspeak.io")
 
     if String.contains?(email, domain) do
       ForwardingAddresses.find_by_forwarding_email(email)

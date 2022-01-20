@@ -19,8 +19,8 @@ defmodule ChatApi.Intercom.Client do
   plug(Tesla.Middleware.Logger)
 
   def get_access_token(code) do
-    client_id = System.get_env("PAPERCUPS_INTERCOM_CLIENT_ID")
-    client_secret = System.get_env("PAPERCUPS_INTERCOM_CLIENT_SECRET")
+    client_id = System.get_env("Hakerspeak_INTERCOM_CLIENT_ID")
+    client_secret = System.get_env("Hakerspeak_INTERCOM_CLIENT_SECRET")
 
     [
       {Tesla.Middleware.BaseUrl, "https://api.intercom.io"},
@@ -117,7 +117,7 @@ defmodule ChatApi.Intercom.Client do
   #   ChatApi.Intercom.Client.search_contacts(authorization, %{
   #     "field" => "email",
   #     "operator" => "=",
-  #     "value" => "alex@papercups.io"
+  #     "value" => "alex@Hakerspeak.io"
   #   })
   # ```
   def search_contacts(%IntercomAuthorization{access_token: access_token}, query),

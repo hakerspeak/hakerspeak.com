@@ -338,7 +338,7 @@ defmodule ChatApi.Reporting.Internal do
   # Optional:
 
   def pull_last_changelog_update() do
-    # TOOD: parse https://raw.githubusercontent.com/papercups-io/papercups/master/CHANGELOG.md
+    # TOOD: parse https://raw.githubusercontent.com/Hakerspeak-io/Hakerspeak/master/CHANGELOG.md
   end
 
   def count_outbound_emails_sent() do

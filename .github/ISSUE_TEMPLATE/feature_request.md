@@ -23,4 +23,4 @@ Add any other context, screenshots, or related issues about the feature request 
 Describe how this should be tested.
 
 **Questions, or need help getting started?**
-(You can also check out our [CONTRIBUTING.md](https://github.com/papercups-io/papercups/blob/master/CONTRIBUTING.md))
+(You can also check out our [CONTRIBUTING.md](https://github.com/Hakerspeak-io/Hakerspeak/blob/master/CONTRIBUTING.md))

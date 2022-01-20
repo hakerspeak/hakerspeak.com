@@ -174,7 +174,7 @@ class GithubIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with GitHub, Papercups will automatically
+              When you link Hakerspeak with GitHub, Hakerspeak will automatically
               detect links to GitHub issues and pull requests, and link the
               issue to the person you're chatting with. Then, once the issue is
               resolved, it will send a private notification letting you know

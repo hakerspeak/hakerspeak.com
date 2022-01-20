@@ -234,7 +234,7 @@ class GmailIntegrationDetails extends React.Component<Props, State> {
           <Title level={3}>Gmail (beta)</Title>
 
           <Paragraph>
-            <Text>Sync messages from your Gmail inbox with Papercups.</Text>
+            <Text>Sync messages from your Gmail inbox with Hakerspeak.</Text>
           </Paragraph>
         </Box>
 
@@ -250,9 +250,9 @@ class GmailIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with Gmail, messages that arrive in your
-              Gmail inbox will be synced with Papercups. This enables you to
-              view and reply to emails directly from the Papercups dashboard, or
+              When you link Hakerspeak with Gmail, messages that arrive in your
+              Gmail inbox will be synced with Hakerspeak. This enables you to
+              view and reply to emails directly from the Hakerspeak dashboard, or
               from any of our other integrations (e.g.{' '}
               <Link to="/integrations/slack/reply">Reply from Slack</Link>).
             </Text>

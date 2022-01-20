@@ -1,6 +1,6 @@
 import React from 'react';
 import {Flex} from 'theme-ui';
-import {Papercups} from '@papercups-io/chat-widget';
+import {Hakerspeak} from '@Hakerspeak-io/chat-widget';
 
 import * as API from '../../api';
 import {formatServerError, sleep} from '../../utils';
@@ -18,8 +18,8 @@ const LambdasOnboarding = () => {
     try {
       const {email, account_id: accountId} = await API.me();
       const result = await API.sendAdminNotification({
-        subject: 'Requesting access for Papercups Functions',
-        text: `${email} (${accountId}) would like to request access to the new Functions feature in Papercups.`,
+        subject: 'Requesting access for Hakerspeak Functions',
+        text: `${email} (${accountId}) would like to request access to the new Functions feature in Hakerspeak.`,
       });
       logger.debug('Successfully requested access:', result);
       await sleep(1000);
@@ -43,7 +43,7 @@ const LambdasOnboarding = () => {
           title="Unable to request access"
           subTitle={<Text>{error}</Text>}
           extra={
-            <Button type="primary" onClick={Papercups.toggle}>
+            <Button type="primary" onClick={Hakerspeak.toggle}>
               Contact us for help
             </Button>
           }

@@ -16,7 +16,7 @@ defmodule ChatApi.WidgetSettingsTest do
       away_message: "some away message"
     }
 
-    @valid_metadata %{"host" => "app.papercups.io", "pathname" => "/"}
+    @valid_metadata %{"host" => "app.Hakerspeak.io", "pathname" => "/"}
 
     setup do
       account = insert(:account)
@@ -56,7 +56,7 @@ defmodule ChatApi.WidgetSettingsTest do
       assert {:ok, %WidgetSetting{} = widget_setting} =
                WidgetSettings.update_widget_metadata(account.id, @valid_metadata)
 
-      assert widget_setting.host == "app.papercups.io"
+      assert widget_setting.host == "app.Hakerspeak.io"
       assert widget_setting.pathname == "/"
     end
 

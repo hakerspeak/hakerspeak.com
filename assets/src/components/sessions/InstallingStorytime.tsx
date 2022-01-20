@@ -35,10 +35,10 @@ class InstallingStorytime extends React.Component<Props, State> {
 
     return `
 <script>
-  // NOTE: DO NOT copy the window.Papercups.config again if you
+  // NOTE: DO NOT copy the window.Hakerspeak.config again if you
   // have already installed the chat widget — otherwise it will
   // override your chat widget settings and cause problems!
-  window.Papercups = {
+  window.Hakerspeak = {
     config: {
       accountId: "${accountId}",
 
@@ -78,7 +78,7 @@ class InstallingStorytime extends React.Component<Props, State> {
     const {accountId} = this.state;
 
     return `
-import {Storytime} from '@papercups-io/storytime';
+import {Storytime} from '@Hakerspeak-io/storytime';
 
 const st = Storytime.init({
   accountId: '${accountId}',
@@ -163,7 +163,7 @@ const st = Storytime.init({
           <Title level={4}>Usage with NPM module</Title>
           <Paragraph>
             <Text>
-              First, install the <Text code>@papercups-io/storytime</Text>{' '}
+              First, install the <Text code>@Hakerspeak-io/storytime</Text>{' '}
               package:
             </Text>
           </Paragraph>
@@ -176,7 +176,7 @@ const st = Storytime.init({
                 fontSize: 12,
               }}
             >
-              <Box p={3}>npm install --save @papercups-io/storytime</Box>
+              <Box p={3}>npm install --save @Hakerspeak-io/storytime</Box>
             </pre>
           </Paragraph>
 
@@ -198,7 +198,7 @@ const st = Storytime.init({
           <Text>
             See the code and star our{' '}
             <a
-              href="https://github.com/papercups-io/storytime"
+              href="https://github.com/Hakerspeak-io/storytime"
               target="_blank"
               rel="noopener noreferrer"
             >

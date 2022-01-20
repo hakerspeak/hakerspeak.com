@@ -22,7 +22,7 @@ defmodule ChatApi.Workers.SendWelcomeEmail do
   end
 
   def is_hosted_version?() do
-    System.get_env("DOMAIN") == "mail.heypapercups.io"
+    System.get_env("DOMAIN") == "mail.heyHakerspeak.io"
   end
 
   def welcome_email_enabled?() do

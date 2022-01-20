@@ -10,9 +10,9 @@ defmodule ChatApiWeb.AdminNotificationController do
     with %{email: email, account_id: account_id} <- conn.assigns.current_user do
       email =
         ChatApi.Emails.send_ad_hoc_email(
-          to: System.get_env("PAPERCUPS_ADMIN_EMAIL", "founders@papercups.io"),
+          to: System.get_env("Hakerspeak_ADMIN_EMAIL", "founders@Hakerspeak.io"),
           from: email,
-          subject: Map.get(params, "subject", "New message from Papercups account #{account_id}"),
+          subject: Map.get(params, "subject", "New message from Hakerspeak account #{account_id}"),
           text: text,
           html: Map.get(params, "html")
         )

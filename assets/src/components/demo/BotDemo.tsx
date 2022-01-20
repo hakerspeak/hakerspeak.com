@@ -20,7 +20,7 @@ import * as API from '../../api';
 import logger from '../../logger';
 import {getBotDemoFaqs, setBotDemoFaqs} from '../../storage';
 // Import widget from separate package
-import ChatWidget from '@papercups-io/chat-widget';
+import ChatWidget from '@Hakerspeak-io/chat-widget';
 import {formatUserExternalId} from '../../utils';
 
 const {
@@ -34,18 +34,18 @@ type FAQ = {
 
 const DEFAULT_FAQS: Array<FAQ> = [
   {
-    q: 'What is Papercups?',
+    q: 'What is Hakerspeak?',
     a:
       "It's a chat widget that you can embed on your website or mobile app so you can talk with your users :) ",
   },
   {
-    q: 'How does Papercups work?',
+    q: 'How does Hakerspeak work?',
     a:
       'You can embed our chat widget on your website or mobile app so you can talk with your users :) ',
   },
   {
     q: 'Do you support live chat?',
-    a: 'Yes! Try chatting with us at http://papercups.io :)',
+    a: 'Yes! Try chatting with us at http://Hakerspeak.io :)',
   },
   {
     q: 'What is the pricing?',
@@ -57,7 +57,7 @@ const DEFAULT_FAQS: Array<FAQ> = [
   },
   {
     q: 'Who are you?',
-    a: "My name is Alex, I'm one of the co-creators of Papercups :)",
+    a: "My name is Alex, I'm one of the co-creators of Hakerspeak :)",
   },
   {
     q: 'Where are you?',
@@ -166,7 +166,7 @@ class Demo extends React.Component<Props, State> {
     const {faqs = []} = this.state;
 
     return request
-      .post(`https://papercups-plugin-demo.herokuapp.com/api/demo/nlp`)
+      .post(`https://Hakerspeak-plugin-demo.herokuapp.com/api/demo/nlp`)
       .send({message, faqs})
       .then((res) => res.body.data)
       .then(console.log)
@@ -185,7 +185,7 @@ class Demo extends React.Component<Props, State> {
         }}
       >
         <Box mb={4}>
-          <Title>Papercups Bot Demo</Title>
+          <Title>Hakerspeak Bot Demo</Title>
           <Alert
             message={
               <Text>
@@ -218,7 +218,7 @@ class Demo extends React.Component<Props, State> {
               <label htmlFor="answer">Answer</label>
               <TextArea
                 id="answer"
-                placeholder="Hmm... it's gotta be Papercups!"
+                placeholder="Hmm... it's gotta be Hakerspeak!"
                 value={newAnswer}
                 onChange={this.handleChangeAnswer}
               />
@@ -275,7 +275,7 @@ class Demo extends React.Component<Props, State> {
           <Box mr={3}>
             <Text strong>
               Our chatbot is still in beta at the moment. Sign up at
-              papercups.io to be notified of its release
+              Hakerspeak.io to be notified of its release
             </Text>
           </Box>
           <Link to="/register">
@@ -288,7 +288,7 @@ class Demo extends React.Component<Props, State> {
         <ChatWidget
           token={REACT_APP_ADMIN_ACCOUNT_ID}
           accountId={REACT_APP_ADMIN_ACCOUNT_ID}
-          title="Welcome to Papercups!"
+          title="Welcome to Hakerspeak!"
           subtitle="Test out our bot in the chat window below 💭"
           primaryColor={colors.primary}
           greeting="Hey there! Try asking a question similar to the FAQs to your left :)"

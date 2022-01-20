@@ -93,7 +93,7 @@ class ApiExplorer extends React.Component<Props, State> {
           <RunKitWrapper
             source={getRunKitCode(CACHE_KEY) || DEFAULT_RUNKIT_SOURCE}
             mode="endpoint"
-            environment={[{name: 'PAPERCUPS_API_KEY', value: personalApiKey}]}
+            environment={[{name: 'Hakerspeak_API_KEY', value: personalApiKey}]}
             minHeight={480}
             nodeVersion="14.x.x"
             onLoad={this.handleRunKitLoaded}

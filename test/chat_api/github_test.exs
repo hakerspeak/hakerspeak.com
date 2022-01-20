@@ -125,44 +125,44 @@ defmodule ChatApi.GithubTest do
 
       assert [] =
                Github.Helpers.extract_github_issue_links(
-                 "check out my website: www.papercups.io, https://papercups.io"
+                 "check out my website: www.Hakerspeak.io, https://Hakerspeak.io"
                )
 
       assert [] =
                Github.Helpers.extract_github_issue_links(
-                 "here's our github repo: https://github.com/papercups-io/papercups"
+                 "here's our github repo: https://github.com/Hakerspeak-io/Hakerspeak"
                )
 
       assert [] =
                Github.Helpers.extract_github_issue_links(
-                 "here's our github repo: https://github.com/papercups-io/papercups/commit/a097f9xxx08885"
+                 "here's our github repo: https://github.com/Hakerspeak-io/Hakerspeak/commit/a097f9xxx08885"
                )
     end
 
     test "Github.Helpers.extract_github_issue_links/1 handles strings with one GitHub issue link" do
-      assert ["http://github.com/papercups-io/papercups/issues/1"] =
+      assert ["http://github.com/Hakerspeak-io/Hakerspeak/issues/1"] =
                Github.Helpers.extract_github_issue_links(
-                 "http://github.com/papercups-io/papercups/issues/1"
+                 "http://github.com/Hakerspeak-io/Hakerspeak/issues/1"
                )
 
-      assert ["https://github.com/papercups-io/papercups/issues/1"] =
+      assert ["https://github.com/Hakerspeak-io/Hakerspeak/issues/1"] =
                Github.Helpers.extract_github_issue_links(
-                 "https://github.com/papercups-io/papercups/issues/1"
+                 "https://github.com/Hakerspeak-io/Hakerspeak/issues/1"
                )
 
-      assert ["https://github.com/papercups-io/papercups/issues/1"] =
+      assert ["https://github.com/Hakerspeak-io/Hakerspeak/issues/1"] =
                Github.Helpers.extract_github_issue_links(
-                 "check out this issue: https://github.com/papercups-io/papercups/issues/1"
+                 "check out this issue: https://github.com/Hakerspeak-io/Hakerspeak/issues/1"
                )
 
-      assert ["https://github.com/papercups-io/papercups/issues/1"] =
+      assert ["https://github.com/Hakerspeak-io/Hakerspeak/issues/1"] =
                Github.Helpers.extract_github_issue_links(
-                 "https://github.com/papercups-io/papercups/issues/1 is the url"
+                 "https://github.com/Hakerspeak-io/Hakerspeak/issues/1 is the url"
                )
 
-      assert ["https://github.com/papercups-io/papercups/issues/1"] =
+      assert ["https://github.com/Hakerspeak-io/Hakerspeak/issues/1"] =
                Github.Helpers.extract_github_issue_links(
-                 "here you go: https://github.com/papercups-io/papercups/issues/1 hope it helps!"
+                 "here you go: https://github.com/Hakerspeak-io/Hakerspeak/issues/1 hope it helps!"
                )
     end
 
@@ -170,18 +170,18 @@ defmodule ChatApi.GithubTest do
       str = """
       here are the github issues we're working on this week:
 
-      - https://github.com/papercups-io/papercups/issues/1
-      - http://github.com/papercups-io/chat/issues/2
-      - https://github.com/papercups-io/widget/issues/3
+      - https://github.com/Hakerspeak-io/Hakerspeak/issues/1
+      - http://github.com/Hakerspeak-io/chat/issues/2
+      - https://github.com/Hakerspeak-io/widget/issues/3
       - https://github.com/alex/website/issues/4
 
       let us know if you want to help out!
       """
 
       assert [
-               "https://github.com/papercups-io/papercups/issues/1",
-               "http://github.com/papercups-io/chat/issues/2",
-               "https://github.com/papercups-io/widget/issues/3",
+               "https://github.com/Hakerspeak-io/Hakerspeak/issues/1",
+               "http://github.com/Hakerspeak-io/chat/issues/2",
+               "https://github.com/Hakerspeak-io/widget/issues/3",
                "https://github.com/alex/website/issues/4"
              ] = Github.Helpers.extract_github_issue_links(str)
     end
@@ -191,37 +191,37 @@ defmodule ChatApi.GithubTest do
       refute Github.Helpers.contains_github_issue_link?("hello world")
 
       refute Github.Helpers.contains_github_issue_link?(
-               "check out my website: www.papercups.io, https://papercups.io"
+               "check out my website: www.Hakerspeak.io, https://Hakerspeak.io"
              )
 
       refute Github.Helpers.contains_github_issue_link?(
-               "here's our github repo: https://github.com/papercups-io/papercups"
+               "here's our github repo: https://github.com/Hakerspeak-io/Hakerspeak"
              )
 
       refute Github.Helpers.contains_github_issue_link?(
-               "here's our github repo: https://github.com/papercups-io/papercups/commit/a097f9xxx08885"
+               "here's our github repo: https://github.com/Hakerspeak-io/Hakerspeak/commit/a097f9xxx08885"
              )
     end
 
     test "Github.Helpers.contains_github_issue_link?/1 handles strings with one GitHub issue link" do
       assert Github.Helpers.contains_github_issue_link?(
-               "http://github.com/papercups-io/papercups/issues/1"
+               "http://github.com/Hakerspeak-io/Hakerspeak/issues/1"
              )
 
       assert Github.Helpers.contains_github_issue_link?(
-               "https://github.com/papercups-io/papercups/issues/1"
+               "https://github.com/Hakerspeak-io/Hakerspeak/issues/1"
              )
 
       assert Github.Helpers.contains_github_issue_link?(
-               "check out this issue: https://github.com/papercups-io/papercups/issues/1"
+               "check out this issue: https://github.com/Hakerspeak-io/Hakerspeak/issues/1"
              )
 
       assert Github.Helpers.contains_github_issue_link?(
-               "https://github.com/papercups-io/papercups/issues/1 is the url"
+               "https://github.com/Hakerspeak-io/Hakerspeak/issues/1 is the url"
              )
 
       assert Github.Helpers.contains_github_issue_link?(
-               "here you go: https://github.com/papercups-io/papercups/issues/1 hope it helps!"
+               "here you go: https://github.com/Hakerspeak-io/Hakerspeak/issues/1 hope it helps!"
              )
     end
 
@@ -229,9 +229,9 @@ defmodule ChatApi.GithubTest do
       str = """
       here are the github issues we're working on this week:
 
-      - https://github.com/papercups-io/papercups/issues/1
-      - http://github.com/papercups-io/chat/issues/2
-      - https://github.com/papercups-io/widget/issues/3
+      - https://github.com/Hakerspeak-io/Hakerspeak/issues/1
+      - http://github.com/Hakerspeak-io/chat/issues/2
+      - https://github.com/Hakerspeak-io/widget/issues/3
       - https://github.com/alex/website/issues/4
 
       let us know if you want to help out!
@@ -241,19 +241,19 @@ defmodule ChatApi.GithubTest do
     end
 
     test "Github.Helpers.parse_github_issue_url/1 extracts the owner, repo, and id of the issue" do
-      assert {:ok, %{owner: "papercups-io", repo: "papercups", id: "1"}} =
+      assert {:ok, %{owner: "Hakerspeak-io", repo: "Hakerspeak", id: "1"}} =
                Github.Helpers.parse_github_issue_url(
-                 "https://github.com/papercups-io/papercups/issues/1"
+                 "https://github.com/Hakerspeak-io/Hakerspeak/issues/1"
                )
 
-      assert {:ok, %{owner: "papercups-io", repo: "chat", id: "2"}} =
+      assert {:ok, %{owner: "Hakerspeak-io", repo: "chat", id: "2"}} =
                Github.Helpers.parse_github_issue_url(
-                 "http://github.com/papercups-io/chat/issues/2"
+                 "http://github.com/Hakerspeak-io/chat/issues/2"
                )
 
-      assert {:ok, %{owner: "papercups-io", repo: "widget", id: "3"}} =
+      assert {:ok, %{owner: "Hakerspeak-io", repo: "widget", id: "3"}} =
                Github.Helpers.parse_github_issue_url(
-                 "https://github.com/papercups-io/widget/issues/3"
+                 "https://github.com/Hakerspeak-io/widget/issues/3"
                )
 
       assert {:ok, %{owner: "alex", repo: "website", id: "4"}} =
@@ -261,7 +261,7 @@ defmodule ChatApi.GithubTest do
 
       assert {:error, :invalid_github_issue_url} =
                Github.Helpers.parse_github_issue_url(
-                 "https://github.com/papercups-io/papercups/commit/a097f9xxx08885"
+                 "https://github.com/Hakerspeak-io/Hakerspeak/commit/a097f9xxx08885"
                )
     end
   end

@@ -5,7 +5,7 @@ import {Box, Flex} from 'theme-ui';
 import {colors, Button, Table, Tag, Text} from '../common';
 import {PlusOutlined, SettingOutlined} from '../icons';
 import {IntegrationType} from './support';
-import {Papercups} from '@papercups-io/chat-widget';
+import {Hakerspeak} from '@Hakerspeak-io/chat-widget';
 
 const IntegrationsTable = ({
   loading,
@@ -15,7 +15,7 @@ const IntegrationsTable = ({
   integrations: Array<IntegrationType>;
 }) => {
   const isChatAvailable = !!document.querySelector(
-    '.Papercups-chatWindowContainer'
+    '.Hakerspeak-chatWindowContainer'
   );
   const columns = [
     {
@@ -126,7 +126,7 @@ const IntegrationsTable = ({
 
           default:
             return isChatAvailable ? (
-              <Button onClick={Papercups.toggle}>Chat with us!</Button>
+              <Button onClick={Hakerspeak.toggle}>Chat with us!</Button>
             ) : (
               <Button disabled>Coming soon!</Button>
             );

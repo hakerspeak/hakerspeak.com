@@ -11,8 +11,8 @@ defmodule ChatApiWeb.CSVHelpers do
 
   ## Examples
 
-      iex> CSVHelpers.dump_csv_rfc4180([%{name: "Papercups", awesome: true}], [:name, :awesome])
-      "name,awesome\\r\\n\\"Papercups\\",\\"true\\""
+      iex> CSVHelpers.dump_csv_rfc4180([%{name: "Hakerspeak", awesome: true}], [:name, :awesome])
+      "name,awesome\\r\\n\\"Hakerspeak\\",\\"true\\""
 
   """
   @spec dump_csv_rfc4180([map() | struct()], list()) :: String.t()

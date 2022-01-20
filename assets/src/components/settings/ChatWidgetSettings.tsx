@@ -3,7 +3,7 @@ import {RouteComponentProps} from 'react-router';
 import {capitalize, debounce} from 'lodash';
 import {Box} from 'theme-ui';
 import {TwitterPicker} from 'react-color';
-import {ChatWidget, Papercups} from '@papercups-io/chat-widget';
+import {ChatWidget, Hakerspeak} from '@Hakerspeak-io/chat-widget';
 
 import * as API from '../../api';
 import {Account, Inbox, User, WidgetIconVariant} from '../../types';
@@ -196,7 +196,7 @@ class ChatWidgetSettings extends React.Component<Props, State> {
 
   handleChangeIconVariant = (variant: 'outlined' | 'filled') => {
     // Ensure the chat is closed to view the icon
-    Papercups.close();
+    Hakerspeak.close();
 
     this.setState({iconVariant: variant}, this.debouncedUpdateWidgetSettings);
   };
@@ -414,11 +414,11 @@ class ChatWidgetSettings extends React.Component<Props, State> {
                     This will only show up for anonymous users. To see an
                     example of what this looks like, visit{' '}
                     <a
-                      href="https://papercups.io"
+                      href="https://Hakerspeak.io"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      https://papercups.io
+                      https://Hakerspeak.io
                     </a>{' '}
                     and open the chat.
                   </Box>
@@ -531,7 +531,7 @@ class ChatWidgetSettings extends React.Component<Props, State> {
           <Text>
             See the code and star our{' '}
             <a
-              href="https://github.com/papercups-io/chat-widget"
+              href="https://github.com/Hakerspeak-io/chat-widget"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -600,7 +600,7 @@ const CodeSnippet: FunctionComponent<CodeSnippetProps> = ({
           <StandardSyntaxHighlighter language="html">
             {`
 <script>
-window.Papercups = {
+window.Hakerspeak = {
   config: {
     ${[
       `token: "${accountId}"`,
@@ -653,7 +653,7 @@ window.Papercups = {
               message={
                 <Text>
                   If you've already installed a previous version of{' '}
-                  <Text code>@papercups-io/chat-widget</Text>, please upgrade to
+                  <Text code>@Hakerspeak-io/chat-widget</Text>, please upgrade to
                   version <Text code>^1.2.0</Text> in order to receive inbox
                   support.
                 </Text>
@@ -664,14 +664,14 @@ window.Papercups = {
           </Box>
           <Paragraph>
             <Text>
-              First, install the <Text code>@papercups-io/chat-widget</Text>{' '}
+              First, install the <Text code>@Hakerspeak-io/chat-widget</Text>{' '}
               package:
             </Text>
           </Paragraph>
 
           <Paragraph>
             <StandardSyntaxHighlighter language="bash">
-              npm install --save @papercups-io/chat-widget
+              npm install --save @Hakerspeak-io/chat-widget
             </StandardSyntaxHighlighter>
           </Paragraph>
 
@@ -686,7 +686,7 @@ window.Papercups = {
           <StandardSyntaxHighlighter language="typescript">
             {`
 import React from "react";
-import {ChatWidget} from "@papercups-io/chat-widget";
+import {ChatWidget} from "@Hakerspeak-io/chat-widget";
 
 const ExamplePage = () => {
   return (
@@ -698,7 +698,7 @@ const ExamplePage = () => {
       */}
       <ChatWidget
         // \`accountId\` is used instead of \`token\` in older versions
-        // of the @papercups-io/chat-widget package (before v1.2.x).
+        // of the @Hakerspeak-io/chat-widget package (before v1.2.x).
         // You can delete this line if you are on the latest version.
         // accountId="${accountId}"
         ${[

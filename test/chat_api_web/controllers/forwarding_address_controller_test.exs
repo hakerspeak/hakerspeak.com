@@ -64,7 +64,7 @@ defmodule ChatApiWeb.ForwardingAddressControllerTest do
 
       forwarding_address =
         insert(:forwarding_address, %{
-          forwarding_email_address: "another@chat.papercups.io",
+          forwarding_email_address: "another@chat.Hakerspeak.io",
           account: another_account
         })
 
@@ -89,7 +89,7 @@ defmodule ChatApiWeb.ForwardingAddressControllerTest do
           forwarding_address:
             params_for(:forwarding_address,
               account: account,
-              forwarding_email_address: "test@chat.papercups.io"
+              forwarding_email_address: "test@chat.Hakerspeak.io"
             )
         )
 
@@ -102,7 +102,7 @@ defmodule ChatApiWeb.ForwardingAddressControllerTest do
                "id" => ^id,
                "account_id" => ^account_id,
                "object" => "forwarding_address",
-               "forwarding_email_address" => "test@chat.papercups.io"
+               "forwarding_email_address" => "test@chat.Hakerspeak.io"
              } = json_response(resp, 200)["data"]
     end
 

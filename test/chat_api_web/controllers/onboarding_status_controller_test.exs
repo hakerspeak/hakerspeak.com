@@ -183,7 +183,7 @@ defmodule ChatApiWeb.OnboardingStatusControllerTest do
     #   assert %{"has_integrations" => true} = json_response(response, 200)
     # end
 
-    # test "is_chat_widget_installed is true if the widget settings host exists and isn't papercups or localhost",
+    # test "is_chat_widget_installed is true if the widget settings host exists and isn't Hakerspeak or localhost",
     #      %{authed_conn: authed_conn, account: account} do
     #   # false because host is nil
     #   widget_settings.get_settings_by_account!(account.id)
@@ -196,9 +196,9 @@ defmodule ChatApiWeb.OnboardingStatusControllerTest do
     #   response = get(authed_conn, Routes.onboarding_status_path(authed_conn, :index))
     #   assert %{"is_chat_widget_installed" => false} = json_response(response, 200)
 
-    #   # false because host is papercups domain
+    #   # false because host is Hakerspeak domain
     #   {:ok, widget_settings} =
-    #  .update_widget_setting(widget_settings, %{host: "app.papercups.io"})
+    #  .update_widget_setting(widget_settings, %{host: "app.Hakerspeak.io"})
 
     #   response = get(authed_conn, Routes.onboarding_status_path(authed_conn, :index))
     #   assert %{"is_chat_widget_installed" => false} = json_response(response, 200)
@@ -210,7 +210,7 @@ defmodule ChatApiWeb.OnboardingStatusControllerTest do
     #   response = get(authed_conn, Routes.onboarding_status_path(authed_conn, :index))
     #   assert %{"is_chat_widget_installed" => false} = json_response(response, 200)
 
-    #   # true because host is set and isn't papercups or localhost
+    #   # true because host is set and isn't Hakerspeak or localhost
     #   WidgetSettings.update_widget_setting(widget_settings, %{host: "fake-domain.com"})
     #   response = get(authed_conn, Routes.onboarding_status_path(authed_conn, :index))
     #   assert %{"is_chat_widget_installed" => true} = json_response(response, 200)

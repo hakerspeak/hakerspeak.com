@@ -10,7 +10,7 @@ ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 ARG BUCKET_NAME
 ARG AWS_REGION
-ARG PAPERCUPS_STRIPE_SECRET
+ARG Hakerspeak_STRIPE_SECRET
 
 ENV APP_VERSION=$APP_VER
 ENV REQUIRE_DB_SSL=$REQUIRE_DB_SSL
@@ -19,7 +19,7 @@ ENV AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
 ENV AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 ENV BUCKET_NAME=$BUCKET_NAME
 ENV AWS_REGION=$AWS_REGION
-ENV PAPERCUPS_STRIPE_SECRET=$PAPERCUPS_STRIPE_SECRET
+ENV Hakerspeak_STRIPE_SECRET=$Hakerspeak_STRIPE_SECRET
 
 
 RUN mkdir /app
@@ -52,7 +52,7 @@ RUN mix phx.digest priv/static
 
 WORKDIR /app
 COPY rel rel
-RUN mix release papercups
+RUN mix release Hakerspeak
 
 FROM alpine:3.13 AS app
 RUN apk add --no-cache openssl ncurses-libs
@@ -63,16 +63,16 @@ WORKDIR /app
 
 ENV HOME=/app
 
-RUN adduser -h /app -u 1000 -s /bin/sh -D papercupsuser
+RUN adduser -h /app -u 1000 -s /bin/sh -D Hakerspeakuser
 
-COPY --from=builder --chown=papercupsuser:papercupsuser /app/_build/prod/rel/papercups /app
-COPY --from=builder --chown=papercupsuser:papercupsuser /app/priv /app/priv
-RUN chown -R papercupsuser:papercupsuser /app
+COPY --from=builder --chown=Hakerspeakuser:Hakerspeakuser /app/_build/prod/rel/Hakerspeak /app
+COPY --from=builder --chown=Hakerspeakuser:Hakerspeakuser /app/priv /app/priv
+RUN chown -R Hakerspeakuser:Hakerspeakuser /app
 
 COPY docker-entrypoint.sh /entrypoint.sh
 RUN chmod a+x /entrypoint.sh
 
-USER papercupsuser
+USER Hakerspeakuser
 
 WORKDIR /app
 ENTRYPOINT ["/entrypoint.sh"]

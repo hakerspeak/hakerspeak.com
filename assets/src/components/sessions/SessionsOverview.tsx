@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import {Box} from 'theme-ui';
 import {Channel, Socket, Presence} from 'phoenix';
-import {Papercups} from '@papercups-io/chat-widget';
+import {Hakerspeak} from '@Hakerspeak-io/chat-widget';
 import {Alert, Button, Container, Paragraph, Text, Title} from '../common';
 import * as API from '../../api';
 import {SOCKET_URL} from '../../socket';
@@ -166,7 +166,7 @@ class SessionsOverview extends React.Component<Props, State> {
                     <Button
                       style={{padding: 0, height: 16}}
                       type="link"
-                      onClick={Papercups.toggle}
+                      onClick={Hakerspeak.toggle}
                     >
                       let us know
                     </Button>{' '}

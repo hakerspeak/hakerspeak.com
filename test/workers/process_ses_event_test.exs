@@ -17,7 +17,7 @@ defmodule ChatApi.ProcessSesEventText do
     test "handling new threads", %{account: account} do
       insert(:forwarding_address,
         account: account,
-        forwarding_email_address: "company@chat.papercups.io"
+        forwarding_email_address: "company@chat.Hakerspeak.io"
       )
 
       text = "Hello world"
@@ -58,7 +58,7 @@ defmodule ChatApi.ProcessSesEventText do
             ses_message_id: "ses_message_id",
             from_address: "customer@example.co",
             to_addresses: ["support@me.com"],
-            forwarded_to: "company@chat.papercups.io",
+            forwarded_to: "company@chat.Hakerspeak.io",
             received_by: []
           })
 
@@ -77,7 +77,7 @@ defmodule ChatApi.ProcessSesEventText do
 
       insert(:forwarding_address,
         account: account,
-        forwarding_email_address: "company@chat.papercups.io"
+        forwarding_email_address: "company@chat.Hakerspeak.io"
       )
 
       text = "Follow up email"
@@ -117,7 +117,7 @@ defmodule ChatApi.ProcessSesEventText do
           ChatApi.Workers.ProcessSesEvent.process_event(%{
             ses_message_id: "ses_message_id",
             from_address: customer.email,
-            to_addresses: ["reply+#{conversation.id}@chat.papercups.io"],
+            to_addresses: ["reply+#{conversation.id}@chat.Hakerspeak.io"],
             forwarded_to: nil,
             received_by: []
           })
@@ -136,7 +136,7 @@ defmodule ChatApi.ProcessSesEventText do
       ChatApi.Workers.ProcessSesEvent.process_event(%{
         ses_message_id: "ses_message_id",
         from_address: customer.email,
-        to_addresses: ["random@chat.papercups.io"],
+        to_addresses: ["random@chat.Hakerspeak.io"],
         forwarded_to: nil,
         received_by: []
       })

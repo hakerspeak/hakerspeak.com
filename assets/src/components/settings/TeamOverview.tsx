@@ -88,7 +88,7 @@ class TeamOverview extends React.Component<Props, State> {
             href={
               shouldDisplayBillingLink
                 ? '/billing'
-                : 'https://papercups.io/pricing'
+                : 'https://Hakerspeak.io/pricing'
             }
           >
             <Button type="primary" size="small">
@@ -131,7 +131,7 @@ class TeamOverview extends React.Component<Props, State> {
             href={
               shouldDisplayBillingLink
                 ? '/billing'
-                : 'https://papercups.io/pricing'
+                : 'https://Hakerspeak.io/pricing'
             }
           >
             <Button type="primary" size="small">

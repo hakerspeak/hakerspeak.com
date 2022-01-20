@@ -9,8 +9,8 @@ defmodule ChatApi.Github.Client do
 
   @spec get_access_token(binary()) :: {:error, any()} | {:ok, Tesla.Env.t()}
   def get_access_token(code) do
-    client_id = System.get_env("PAPERCUPS_GITHUB_CLIENT_ID")
-    client_secret = System.get_env("PAPERCUPS_GITHUB_CLIENT_SECRET")
+    client_id = System.get_env("Hakerspeak_GITHUB_CLIENT_ID")
+    client_secret = System.get_env("Hakerspeak_GITHUB_CLIENT_SECRET")
 
     [
       {Tesla.Middleware.BaseUrl, "https://github.com"},

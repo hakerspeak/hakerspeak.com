@@ -211,7 +211,7 @@ class SlackReplyIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with Slack, all new incoming messages will
+              When you link Hakerspeak with Slack, all new incoming messages will
               be forwarded to the Slack channel of your choosing. From the
               comfort of your team's Slack workspace, you can reply to and
               resolve conversations with your users.

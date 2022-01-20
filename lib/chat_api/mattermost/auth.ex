@@ -6,10 +6,10 @@ defmodule ChatApi.Mattermost.Auth do
   def client do
     OAuth2.Client.new(
       strategy: __MODULE__,
-      client_id: System.get_env("PAPERCUPS_MATTERMOST_CLIENT_ID"),
-      client_secret: System.get_env("PAPERCUPS_MATTERMOST_CLIENT_SECRET"),
-      redirect_uri: System.get_env("PAPERCUPS_MATTERMOST_REDIRECT_URI"),
-      site: System.get_env("PAPERCUPS_MATTERMOST_URL"),
+      client_id: System.get_env("Hakerspeak_MATTERMOST_CLIENT_ID"),
+      client_secret: System.get_env("Hakerspeak_MATTERMOST_CLIENT_SECRET"),
+      redirect_uri: System.get_env("Hakerspeak_MATTERMOST_REDIRECT_URI"),
+      site: System.get_env("Hakerspeak_MATTERMOST_URL"),
       authorize_url: "/oauth/authorize",
       token_url: "/oauth/access_token"
     )
@@ -18,9 +18,9 @@ defmodule ChatApi.Mattermost.Auth do
   def refresh_client() do
     OAuth2.Client.new(
       strategy: OAuth2.Strategy.Refresh,
-      client_id: System.get_env("PAPERCUPS_MATTERMOST_CLIENT_ID"),
-      client_secret: System.get_env("PAPERCUPS_MATTERMOST_CLIENT_SECRET"),
-      site: System.get_env("PAPERCUPS_MATTERMOST_URL"),
+      client_id: System.get_env("Hakerspeak_MATTERMOST_CLIENT_ID"),
+      client_secret: System.get_env("Hakerspeak_MATTERMOST_CLIENT_SECRET"),
+      site: System.get_env("Hakerspeak_MATTERMOST_URL"),
       authorize_url: "/oauth/authorize",
       token_url: "/oauth/access_token"
     )

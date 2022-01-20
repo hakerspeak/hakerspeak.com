@@ -1,4 +1,4 @@
-const PREFIX = '__PAPERCUPS__';
+const PREFIX = '__Hakerspeak__';
 
 export const get = (key: string) => {
   const result = localStorage.getItem(`${PREFIX}${key}`);

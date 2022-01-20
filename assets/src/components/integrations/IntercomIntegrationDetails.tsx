@@ -162,7 +162,7 @@ class IntercomIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with Intercom, you can easily view and
+              When you link Hakerspeak with Intercom, you can easily view and
               sync data with your contacts in Intercom.
             </Text>
           </Card>

@@ -163,8 +163,8 @@ class TwilioIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with Twilio, your customers can message
-              you via SMS and you can reply directly via Papercups.
+              When you link Hakerspeak with Twilio, your customers can message
+              you via SMS and you can reply directly via Hakerspeak.
             </Text>
           </Card>
         </Box>

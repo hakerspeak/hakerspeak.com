@@ -245,7 +245,7 @@ defmodule ChatApiWeb.Router do
     %{
       info: %{
         version: "1.0",
-        title: "Papercups API"
+        title: "Hakerspeak API"
       }
     }
   end

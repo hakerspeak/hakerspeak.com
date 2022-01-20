@@ -51,7 +51,7 @@ type State = {
 };
 
 class LambdaDetailsPage extends React.Component<Props, State> {
-  papercups: any;
+  Hakerspeak: any;
   monaco: any | null = null;
 
   state: State = {
@@ -169,8 +169,8 @@ class LambdaDetailsPage extends React.Component<Props, State> {
   };
 
   handleSendTestMessage = () => {
-    if (this.papercups) {
-      this.papercups.sendNewMessage({
+    if (this.Hakerspeak) {
+      this.Hakerspeak.sendNewMessage({
         body: 'Testing the message:created event!',
         metadata: {disable_webhook_events: true},
       });
@@ -470,7 +470,7 @@ class LambdaDetailsPage extends React.Component<Props, State> {
                     newMessagePlaceholder: 'Send a test message...',
                     baseUrl: BASE_URL,
                   }}
-                  onChatLoaded={(papercups) => (this.papercups = papercups)}
+                  onChatLoaded={(Hakerspeak) => (this.Hakerspeak = Hakerspeak)}
                   onMessageSent={this.handleInvokeLambda}
                 />
               </Flex>

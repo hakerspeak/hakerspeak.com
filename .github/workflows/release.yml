@@ -20,8 +20,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
-          name: papercups/papercups
+          name: Hakerspeak/Hakerspeak
           push: true
-          tags: papercups/papercups:latest
+          tags: Hakerspeak/Hakerspeak:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

@@ -80,7 +80,7 @@ defmodule ChatApiWeb.SlackController do
         end
 
       # TODO: after creating, check if connected channel is private;
-      # If yes, use webhook_url to send notification that Papercups app needs
+      # If yes, use webhook_url to send notification that Hakerspeak app needs
       # to be added manually, along with instructions for how to do so
       {:ok, _} =
         SlackAuthorizations.create_or_update(account_id, filters, %{
@@ -329,11 +329,11 @@ defmodule ChatApiWeb.SlackController do
   @spec send_private_channel_instructions(:reply | :support, binary()) :: any()
   defp send_private_channel_instructions(:reply, webhook_url) do
     message = """
-    Hi there! :wave: looks like you've connected Papercups to this channel.
+    Hi there! :wave: looks like you've connected Hakerspeak to this channel.
 
-    In order to complete your setup, you'll need to manually add the *Papercups* app this channel.
+    In order to complete your setup, you'll need to manually add the *Hakerspeak* app this channel.
 
-    You can do this by typing `/app` in the message box below, clicking on "*Add apps to this channel*", and selecting the *Papercups* app.
+    You can do this by typing `/app` in the message box below, clicking on "*Add apps to this channel*", and selecting the *Hakerspeak* app.
 
     (If that doesn't work, try following these instructions: https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace)
 
@@ -348,11 +348,11 @@ defmodule ChatApiWeb.SlackController do
 
   defp send_private_channel_instructions(:support, webhook_url) do
     message = """
-    Hi there! :wave: looks like you've connected Papercups to a private channel.
+    Hi there! :wave: looks like you've connected Hakerspeak to a private channel.
 
-    In order to complete your setup, you'll need to manually add the *Papercups* app to this channel, as well as any other channels in which you'd like it to be active.
+    In order to complete your setup, you'll need to manually add the *Hakerspeak* app to this channel, as well as any other channels in which you'd like it to be active.
 
-    You can do this by typing `/app` in the message box below, click on "*Add apps to this channel*", and selecting the *Papercups* app.
+    You can do this by typing `/app` in the message box below, click on "*Add apps to this channel*", and selecting the *Hakerspeak* app.
 
     (If that doesn't work, try following these instructions: https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace)
 
@@ -370,9 +370,9 @@ defmodule ChatApiWeb.SlackController do
     message = """
     Hi there! :wave:
 
-    If you'd like to sync messages with Papercups in other channels, you'll need to manually add the *Papercups* app to them.
+    If you'd like to sync messages with Hakerspeak in other channels, you'll need to manually add the *Hakerspeak* app to them.
 
-    You can do this by going to the channels you want to sync, typing `/app` in the message box, clicking on "*Add apps to this channel*", and selecting the *Papercups* app.
+    You can do this by going to the channels you want to sync, typing `/app` in the message box, clicking on "*Add apps to this channel*", and selecting the *Hakerspeak* app.
 
     (If that doesn't work, try following these instructions: https://slack.com/help/articles/202035138-Add-apps-to-your-Slack-workspace)
 

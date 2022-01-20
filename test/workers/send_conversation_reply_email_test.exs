@@ -144,7 +144,7 @@ defmodule ChatApi.SendConversationReplyEmailTest do
           account: account,
           conversation: conversation,
           user: user,
-          body: "This is a test _with_ **markdown** [woot](https://papercups.io)",
+          body: "This is a test _with_ **markdown** [woot](https://Hakerspeak.io)",
           customer: nil,
           seen_at: nil
         )
@@ -153,7 +153,7 @@ defmodule ChatApi.SendConversationReplyEmailTest do
       email =
         ChatApi.Emails.Email.conversation_reply(
           to: customer.email,
-          from: "Papercups Test",
+          from: "Hakerspeak Test",
           reply_to: user.email,
           company: account.company_name,
           messages: messages,
@@ -163,7 +163,7 @@ defmodule ChatApi.SendConversationReplyEmailTest do
       assert email.html_body =~ "This is a test with plain text"
 
       assert email.html_body =~
-               "This is a test <em>with</em> <strong>markdown</strong> <a href=\"https://papercups.io\">woot</a>"
+               "This is a test <em>with</em> <strong>markdown</strong> <a href=\"https://Hakerspeak.io\">woot</a>"
     end
 
     test "handles invalid input" do

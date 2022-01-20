@@ -89,7 +89,7 @@ const NewWebhookModal = ({
       <Box>
         <Paragraph>
           <Text>
-            You can subscribe to be notified of events in Papercups (for
+            You can subscribe to be notified of events in Hakerspeak (for
             example, when a new message is created) at a URL of your choice.
           </Text>
         </Paragraph>

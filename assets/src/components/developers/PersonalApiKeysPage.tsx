@@ -113,7 +113,7 @@ class PersonalApiKeysPage extends React.Component<Props, State> {
             <Paragraph>
               <Text>
                 Generate personal API keys to interact directly with the
-                Papercups API.
+                Hakerspeak API.
               </Text>
             </Paragraph>
 

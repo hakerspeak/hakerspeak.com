@@ -1,11 +1,11 @@
 ### Friday, 23 July
-- [**Papercups Functions**](https://functions.papercups.io/) is now in beta :rocket: [0]
-- [[#916](https://github.com/papercups-io/papercups/pull/916)] Notify teammates with **@ mentions** in the dashboard 🔊 [1]
-- [[#919](https://github.com/papercups-io/papercups/pull/919)] Use **canned responses/saved replies** in the dashboard [2]
-- [[#908](https://github.com/papercups-io/papercups/pull/908)] Send files to customers **directly from Slack**
-- [[#917](https://github.com/papercups-io/papercups/pull/917)] Dashboard messages are now enhanced with more metadata 🔥 [3]
+- [**Hakerspeak Functions**](https://functions.Hakerspeak.io/) is now in beta :rocket: [0]
+- [[#916](https://github.com/Hakerspeak-io/Hakerspeak/pull/916)] Notify teammates with **@ mentions** in the dashboard 🔊 [1]
+- [[#919](https://github.com/Hakerspeak-io/Hakerspeak/pull/919)] Use **canned responses/saved replies** in the dashboard [2]
+- [[#908](https://github.com/Hakerspeak-io/Hakerspeak/pull/908)] Send files to customers **directly from Slack**
+- [[#917](https://github.com/Hakerspeak-io/Hakerspeak/pull/917)] Dashboard messages are now enhanced with more metadata 🔥 [3]
 
-_[0] Papercups Functions_
+_[0] Hakerspeak Functions_
 > <img width="800" src="https://user-images.githubusercontent.com/5264279/126827126-c99ec771-6543-4de5-b7d0-3b583383a80a.png" />
 
 _[1] @ mentions_
@@ -20,14 +20,14 @@ _[3] Enhanced message UI_
 | <img alt="Email" src="https://user-images.githubusercontent.com/5264279/126564253-0a5a33bf-ccb3-4b33-8eb0-4f52bb51687f.png"> | <img alt="Slack" src="https://user-images.githubusercontent.com/5264279/126564260-97341660-f597-4b54-834a-9f7bbd4c2fc9.png"> |
 
 ### Friday, 11 June
-- [[#826](https://github.com/papercups-io/papercups/pull/826)] Implement v1 of **conversation nudges/reminders** [0]
-- [[#841](https://github.com/papercups-io/papercups/pull/841)] **Automatically link GitHub issue** to customer when URL is shared in conversation [1]
-- [[#789](https://github.com/papercups-io/papercups/pull/789)] Send messages to customers **directly from customer view** [2]
-- [[#833](https://github.com/papercups-io/papercups/pull/833)] Add a modal with information on **keyboard shortcuts**
-- [[#831](https://github.com/papercups-io/papercups/pull/831)] Fix how attachments are synced with the Gmail integration
-- [[#856](https://github.com/papercups-io/papercups/pull/856)] Support unassigning someone from a conversation
-- [[#790](https://github.com/papercups-io/papercups/pull/790)] Add **inboxes per channel** (chat, Slack, email) [3]
-- [[#815](https://github.com/papercups-io/papercups/pull/815), [#811](https://github.com/papercups-io/papercups/pull/811)] Search improvements to customers view
+- [[#826](https://github.com/Hakerspeak-io/Hakerspeak/pull/826)] Implement v1 of **conversation nudges/reminders** [0]
+- [[#841](https://github.com/Hakerspeak-io/Hakerspeak/pull/841)] **Automatically link GitHub issue** to customer when URL is shared in conversation [1]
+- [[#789](https://github.com/Hakerspeak-io/Hakerspeak/pull/789)] Send messages to customers **directly from customer view** [2]
+- [[#833](https://github.com/Hakerspeak-io/Hakerspeak/pull/833)] Add a modal with information on **keyboard shortcuts**
+- [[#831](https://github.com/Hakerspeak-io/Hakerspeak/pull/831)] Fix how attachments are synced with the Gmail integration
+- [[#856](https://github.com/Hakerspeak-io/Hakerspeak/pull/856)] Support unassigning someone from a conversation
+- [[#790](https://github.com/Hakerspeak-io/Hakerspeak/pull/790)] Add **inboxes per channel** (chat, Slack, email) [3]
+- [[#815](https://github.com/Hakerspeak-io/Hakerspeak/pull/815), [#811](https://github.com/Hakerspeak-io/Hakerspeak/pull/811)] Search improvements to customers view
 
 _[0] Conversation reminders v1_
 > <img width="800" src="https://user-images.githubusercontent.com/5264279/119059541-8444ba00-b99e-11eb-9576-a70a896ba038.png" />
@@ -43,16 +43,16 @@ _[3] Inboxes per channel_
 
 
 ### Friday, 23 April
-- [[#759](https://github.com/papercups-io/papercups/pull/759)] **GitHub integration** v1 (associate GitHub issues with customers) [0] :octocat:
-- [[#755](https://github.com/papercups-io/papercups/pull/755)] Add ability to **view and create notes** from the customer details page [1]
-- [[#743](https://github.com/papercups-io/papercups/pull/743)] Add basic search to customers page [2]
-- [[#736](https://github.com/papercups-io/papercups/pull/736)] Add ability to edit customer details page [3]
-- [[#726](https://github.com/papercups-io/papercups/pull/726)] Support **markdown images** in chat messages :rocket: [4]
-- [[#733](https://github.com/papercups-io/papercups/pull/733)] Add default **company logo image** for chat bubble [5]
-- [[#723](https://github.com/papercups-io/papercups/pull/723)] Support specifying customer in `POST /api/v1/messages` endpoint
-- [[#716](https://github.com/papercups-io/papercups/pull/716)] Reopen conversation when new reply comes in via Gmail integration
-- [[#715](https://github.com/papercups-io/papercups/pull/715)] Improve customer details page UX by reducing number of clicks
-- [[#703](https://github.com/papercups-io/papercups/pull/703)] Add ability to **send user invitation emails** from Account Overview ✉️
+- [[#759](https://github.com/Hakerspeak-io/Hakerspeak/pull/759)] **GitHub integration** v1 (associate GitHub issues with customers) [0] :octocat:
+- [[#755](https://github.com/Hakerspeak-io/Hakerspeak/pull/755)] Add ability to **view and create notes** from the customer details page [1]
+- [[#743](https://github.com/Hakerspeak-io/Hakerspeak/pull/743)] Add basic search to customers page [2]
+- [[#736](https://github.com/Hakerspeak-io/Hakerspeak/pull/736)] Add ability to edit customer details page [3]
+- [[#726](https://github.com/Hakerspeak-io/Hakerspeak/pull/726)] Support **markdown images** in chat messages :rocket: [4]
+- [[#733](https://github.com/Hakerspeak-io/Hakerspeak/pull/733)] Add default **company logo image** for chat bubble [5]
+- [[#723](https://github.com/Hakerspeak-io/Hakerspeak/pull/723)] Support specifying customer in `POST /api/v1/messages` endpoint
+- [[#716](https://github.com/Hakerspeak-io/Hakerspeak/pull/716)] Reopen conversation when new reply comes in via Gmail integration
+- [[#715](https://github.com/Hakerspeak-io/Hakerspeak/pull/715)] Improve customer details page UX by reducing number of clicks
+- [[#703](https://github.com/Hakerspeak-io/Hakerspeak/pull/703)] Add ability to **send user invitation emails** from Account Overview ✉️
 
 
 _[0] Github integration v1_
@@ -67,13 +67,13 @@ _[2] Customer search_
 
 ### Friday, 2 April
 
-- [[#697](https://github.com/papercups-io/papercups/pull/697)] The **Gmail integration** is now ready for beta users :rocket: [0]
-- [[#680](https://github.com/papercups-io/papercups/pull/680)] Set up v1 of our **Twilio integration** 📱 [1]
-- [[#682](https://github.com/papercups-io/papercups/pull/682)] Added **search functionality** for tags and customers
-- [[#686](https://github.com/papercups-io/papercups/pull/686)] The dashboard is now **cookie free** 🙅 🍪
-- [[#670](https://github.com/papercups-io/papercups/pull/670)] Set up a **customer details page** [2]
-- [[#669](https://github.com/papercups-io/papercups/pull/669)] You can now **view conversations by tag** [3]
-- [[#687](https://github.com/papercups-io/papercups/pull/687)] Upgraded Elixir to **v1.11** 
+- [[#697](https://github.com/Hakerspeak-io/Hakerspeak/pull/697)] The **Gmail integration** is now ready for beta users :rocket: [0]
+- [[#680](https://github.com/Hakerspeak-io/Hakerspeak/pull/680)] Set up v1 of our **Twilio integration** 📱 [1]
+- [[#682](https://github.com/Hakerspeak-io/Hakerspeak/pull/682)] Added **search functionality** for tags and customers
+- [[#686](https://github.com/Hakerspeak-io/Hakerspeak/pull/686)] The dashboard is now **cookie free** 🙅 🍪
+- [[#670](https://github.com/Hakerspeak-io/Hakerspeak/pull/670)] Set up a **customer details page** [2]
+- [[#669](https://github.com/Hakerspeak-io/Hakerspeak/pull/669)] You can now **view conversations by tag** [3]
+- [[#687](https://github.com/Hakerspeak-io/Hakerspeak/pull/687)] Upgraded Elixir to **v1.11** 
 
 _[0] Sync with Gmail_
 | Gmail  | Dashboard | Slack |
@@ -93,13 +93,13 @@ _[3] Conversations by tag_
 
 ### Monday, 22 February
 
-- [[#575](https://github.com/papercups-io/papercups/pull/575)] Added a page to manage your tags and **group customers by tag**
-- [[#569](https://github.com/papercups-io/papercups/pull/569)] Added ability to **load previous conversations** from the context of a single conversation [0]
-- [[#566](https://github.com/papercups-io/papercups/pull/566)] Made it possible to **close/reopen conversations directly from Slack** [1]
-- [[#563](https://github.com/papercups-io/papercups/pull/563)] Display **conversation status** dynamically **in Slack thread** [2]
-- [[#562](https://github.com/papercups-io/papercups/pull/562)] Support **private customer notes** from **within Slack** [3]
-- [[#558](https://github.com/papercups-io/papercups/pull/558)] Improve how we display users and customers in Slack
-- [[#549](https://github.com/papercups-io/papercups/pull/549)] Add link directly to Slack thread from dashboard [4]
+- [[#575](https://github.com/Hakerspeak-io/Hakerspeak/pull/575)] Added a page to manage your tags and **group customers by tag**
+- [[#569](https://github.com/Hakerspeak-io/Hakerspeak/pull/569)] Added ability to **load previous conversations** from the context of a single conversation [0]
+- [[#566](https://github.com/Hakerspeak-io/Hakerspeak/pull/566)] Made it possible to **close/reopen conversations directly from Slack** [1]
+- [[#563](https://github.com/Hakerspeak-io/Hakerspeak/pull/563)] Display **conversation status** dynamically **in Slack thread** [2]
+- [[#562](https://github.com/Hakerspeak-io/Hakerspeak/pull/562)] Support **private customer notes** from **within Slack** [3]
+- [[#558](https://github.com/Hakerspeak-io/Hakerspeak/pull/558)] Improve how we display users and customers in Slack
+- [[#549](https://github.com/Hakerspeak-io/Hakerspeak/pull/549)] Add link directly to Slack thread from dashboard [4]
 
 _[0] Load previous conversations_
 > <img width="800" alt="Load previous conversations" src="https://user-images.githubusercontent.com/5264279/107700951-32e1ac00-6c86-11eb-88af-2bf3a196b09f.gif">
@@ -120,12 +120,12 @@ _[3] Link to Slack thread:_
 
 ### Monday, 18 January
 
-- [[#521](https://github.com/papercups-io/papercups/pull/521)] Added **private conversation notes** so you can send messages internally 🔒  [0]
-- [[#526](https://github.com/papercups-io/papercups/pull/526)] Added **response time metrics** so you can see how long it takes you to reply to customers 📈 [1]
-- [[#514](https://github.com/papercups-io/papercups/pull/514)] Added the ability to **disconnect from Slack** integration 
-- [[#503](https://github.com/papercups-io/papercups/pull/503)] Started setting up the UI for managing **Company information**  [2]
-- [[#483](https://github.com/papercups-io/papercups/pull/483)] Added **private customer notes** so you can keep notes on your users 📔 [3]
-- Set up our beta integration for syncing Slack support channels with Papercups :rocket:
+- [[#521](https://github.com/Hakerspeak-io/Hakerspeak/pull/521)] Added **private conversation notes** so you can send messages internally 🔒  [0]
+- [[#526](https://github.com/Hakerspeak-io/Hakerspeak/pull/526)] Added **response time metrics** so you can see how long it takes you to reply to customers 📈 [1]
+- [[#514](https://github.com/Hakerspeak-io/Hakerspeak/pull/514)] Added the ability to **disconnect from Slack** integration 
+- [[#503](https://github.com/Hakerspeak-io/Hakerspeak/pull/503)] Started setting up the UI for managing **Company information**  [2]
+- [[#483](https://github.com/Hakerspeak-io/Hakerspeak/pull/483)] Added **private customer notes** so you can keep notes on your users 📔 [3]
+- Set up our beta integration for syncing Slack support channels with Hakerspeak :rocket:
 
 _[0] Private note messages:_
 | Reply (default) | Private note |  
@@ -143,17 +143,17 @@ _[3] Private customer notes_
 
 ### Friday, 18 December
 
-- [[#478](https://github.com/papercups-io/papercups/pull/478)] Added a **new Slack integration** which allows you to sync Slack channel conversations with Papercups [0]
+- [[#478](https://github.com/Hakerspeak-io/Hakerspeak/pull/478)] Added a **new Slack integration** which allows you to sync Slack channel conversations with Hakerspeak [0]
   - This is primarily for our new B2B customers 🚀 
 - Added **new configuration options** to our chat widget
   - You can now customize virtually all the of the text in the widget ✏️ 
-  - _See https://github.com/papercups-io/chat-widget#options for all the latest configuration options_
-- [[#466](https://github.com/papercups-io/papercups/pull/466)] Made it clearer **when the user is inactive/disconnected** in the Storytime live session viewer [1]
-- [[#445](https://github.com/papercups-io/papercups/pull/445)] Added a **notification sound** when new messages arrive in the dashboard 🔔 
-- [[#440](https://github.com/papercups-io/papercups/pull/440)] Fixed the issue where auth sessions get reset after new deployments 🐞 
-- [[#406](https://github.com/papercups-io/papercups/pull/406)] Added support for **API keys**, for easier API access 🧑‍💻 
-- [[#404](https://github.com/papercups-io/papercups/pull/404)] Added support for **proactively messaging customers** from the Storytime live session viewer [2]
-- [[#396](https://github.com/papercups-io/papercups/pull/396)] Huge improvements to our **test suite** 🎉 [3]
+  - _See https://github.com/Hakerspeak-io/chat-widget#options for all the latest configuration options_
+- [[#466](https://github.com/Hakerspeak-io/Hakerspeak/pull/466)] Made it clearer **when the user is inactive/disconnected** in the Storytime live session viewer [1]
+- [[#445](https://github.com/Hakerspeak-io/Hakerspeak/pull/445)] Added a **notification sound** when new messages arrive in the dashboard 🔔 
+- [[#440](https://github.com/Hakerspeak-io/Hakerspeak/pull/440)] Fixed the issue where auth sessions get reset after new deployments 🐞 
+- [[#406](https://github.com/Hakerspeak-io/Hakerspeak/pull/406)] Added support for **API keys**, for easier API access 🧑‍💻 
+- [[#404](https://github.com/Hakerspeak-io/Hakerspeak/pull/404)] Added support for **proactively messaging customers** from the Storytime live session viewer [2]
+- [[#396](https://github.com/Hakerspeak-io/Hakerspeak/pull/396)] Huge improvements to our **test suite** 🎉 [3]
   - Added factories to DRY things up, sped test runner up 3x, and removed all background warning/error messages
   - Big thanks to **[@flmel](https://github.com/flmel)** for helping out with this! 🙏 
 
@@ -176,7 +176,7 @@ _[3] Test suite improvements:_
 - Added a **status indicator to Storytime** so you can distinguish between active and inactive users on your website [1]
 - We now start a new conversation with customers if the last conversation was closed
 - Fixed Slack message threads when you change your Slack integration to a new channel 🐞 
-- [Beta] We have a **[Wordpress plugin](https://github.com/papercups-io/wordpress-plugin)** in the works, let us know if you're interested in using it!
+- [Beta] We have a **[Wordpress plugin](https://github.com/Hakerspeak-io/wordpress-plugin)** in the works, let us know if you're interested in using it!
   - Huge thanks to **[@ZmagoD](https://github.com/ZmagoD)** for setting this up! 🔥
 
 _[0] Slack conversation state updates:_
@@ -189,7 +189,7 @@ _[1] Storytime status indicator:_
 
 - We released v1 of our **Reporting Dashboard** 📈 🚀 📊  [0]
 - [Beta] Adding support for another variant of the **chat icon** [1]
-  - _See it live on our [website](http://papercups.io/)!_
+  - _See it live on our [website](http://Hakerspeak.io/)!_
 - Added docs for **getting started with Storytime** [2]
   - _Storytime allows you to view your users' screen live while chatting with them_
 - Added a link to **view the live user session** from the Conversation UI [3]
@@ -211,8 +211,8 @@ _[3] View live session:_
 ### Monday, 26 October
 
 - Our new screen-sharing product — **Storytime** — is now in beta! 🚀 🔥 🎉 [0]
-  - _Repo: https://github.com/papercups-io/storytime_
-  - _Website: http://storytime.papercups.io/_
+  - _Repo: https://github.com/Hakerspeak-io/storytime_
+  - _Website: http://storytime.Hakerspeak.io/_
 - You can now **hide the widget toggle button** and **open it programmatically** [1]
 
 _[0] Storytime:_
@@ -231,13 +231,13 @@ _[1] Hidden chat widget:_
 ### Friday, 9 October
 
 - We released our **FAQ chatbot** demo 🤖 [0]
-  - Check it out! https://app.papercups.io/bot/demo
+  - Check it out! https://app.Hakerspeak.io/bot/demo
 - Added ability to **set working hours** [1]
 - **Customer details** are shown in the Conversations UI by default [2]
 - You can now add **tags** to your customers and conversations [3]
-- Released **v1.1.0** of our [chat widget](https://github.com/papercups-io/chat-widget)
+- Released **v1.1.0** of our [chat widget](https://github.com/Hakerspeak-io/chat-widget)
 - Added an **Easter Egg** to our chat 🔥
-  - Try going to our [demo page](https://app.papercups.io/demo) and asking **"What is 2^11?"** in the chat window! 🤓
+  - Try going to our [demo page](https://app.Hakerspeak.io/demo) and asking **"What is 2^11?"** in the chat window! 🤓
 
 _[0] FAQ chatbot:_
 
@@ -263,7 +263,7 @@ _[3] Customer tags:_
   - Can be enabled by adding `?debug=1` to the query string, or setting the `REACT_APP_DEBUG_MODE_ENABLED` environment variable to `1` (`true`)
 - We now display more customer info at the top of each conversation window [2]
 - [Beta] Added support for **programmatically opening/closing** chat widget [3]
-  - Available in `"@papercups-io/chat-widget": "^1.1.0-beta.3"`
+  - Available in `"@Hakerspeak-io/chat-widget": "^1.1.0-beta.3"`
 
 _[0] Admin disabling user:_
 | Admin view | User view |
@@ -288,7 +288,7 @@ _[3] Programmatically toggle chat widget (beta):_
 - Added support for storing **ad hoc metadata** on a customer [1]
 - Added **support for callbacks** in chat widget [2]
 - Display company name instead of "Bot" in chat widget
-- Added initial **API docs** (work-in-progress): https://github.com/papercups-io/papercups/wiki/API-Docs
+- Added initial **API docs** (work-in-progress): https://github.com/Hakerspeak-io/Hakerspeak/wiki/API-Docs
 - Fix Slack messages not triggering webhook events 🐞
 
 _[0] Admin vs User roles:_
@@ -300,7 +300,7 @@ _[1] Ad hoc customer metadata in chat widget config:_
 
 ```javascript
 <script>
-  window.Papercups = {
+  window.Hakerspeak = {
     config: {
       // ...
       customer: {
@@ -331,7 +331,7 @@ _[2] New chat widget callbacks:_
 
 ### Thursday, 10 September
 
-- [[Beta]](https://github.com/papercups-io/papercups/pull/216) Your customers with valid email addresses will now be **notified via email** in case they miss a message from you 🎉
+- [[Beta]](https://github.com/Hakerspeak-io/Hakerspeak/pull/216) Your customers with valid email addresses will now be **notified via email** in case they miss a message from you 🎉
 - Users can now **reset their passwords** [0]
 
 _[0] Reset password:_
@@ -368,7 +368,7 @@ _[1] Slack integration alert:_
 ### Tuesday, 25 August
 
 - Added support for **webhook integrations** [0]
-  - Docs: https://github.com/papercups-io/papercups/wiki/Event-Subscriptions-with-Webhooks
+  - Docs: https://github.com/Hakerspeak-io/Hakerspeak/wiki/Event-Subscriptions-with-Webhooks
 - Added more customer metadata to the dashboard [1]
 - Added **more customer metadata to Slack messages** [2]
 - Added ability to **disable registration** without invitation for self-hosted instances
@@ -388,7 +388,7 @@ _[2] Customer metadata in Slack:_
 
 ### Thursday, 20 August
 
-- Added **support for React Native**: https://github.com/papercups-io/chat-widget-native [0]
+- Added **support for React Native**: https://github.com/Hakerspeak-io/chat-widget-native [0]
 
 _[0] React Native support:_
 

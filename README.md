@@ -1,13 +1,12 @@
 **:warning: Maintenance Mode**
 
-> _Papercups is in maintenance mode. This means there won't be any major new features in the near future. We will still accept pull requests and conduct major bug fixes._
+> _Hakerspeak is in maintenance mode. This means there won't be any major new features in the near future. We will still accept pull requests and conduct major bug fixes._
 
 
-# Papercups
+# Hakerspeak
 
-Papercups is an open source live customer support tool web app written in Elixir. We offer a hosted version at [app.papercups.io](https://app.papercups.io/).
 
-You can check out how our chat widget looks and play around with customizing it on our [demo page](https://app.papercups.io/demo/). The chat widget component is also open sourced at [github.com/papercups-io/chat-widget](https://github.com/papercups-io/chat-widget).
+You can check out how our chat widget looks and play around with customizing it on our [demo page](https://app.Hakerspeak.io/demo/). The chat widget component is also open sourced at [github.com/Hakerspeak-io/chat-widget](https://github.com/Hakerspeak-io/chat-widget).
 
 _Watch how easy it is to get set up with our Slack integration 🚀 :_
 ![slack-setup](https://user-images.githubusercontent.com/4218509/88716918-a0583180-d0d4-11ea-93b3-12437ac51138.gif)
@@ -16,21 +15,21 @@ _Watch how easy it is to get set up with our Slack integration 🚀 :_
 
 The fastest way to get started is one click deploy on Heroku with:
 
-<a href="https://heroku.com/deploy?template=https://github.com/papercups-io/papercups"><img src="https://www.herokucdn.com/deploy/button.svg" width="200px" /></a>
+<a href="https://heroku.com/deploy?template=https://github.com/Hakerspeak-io/Hakerspeak"><img src="https://www.herokucdn.com/deploy/button.svg" width="200px" /></a>
 
 ## Philosophy
 
 We wanted to make a self-hosted customer support tool like Zendesk and Intercom for companies that have privacy and security concerns about having customer data going to third party services.
 
 ## Features
-- **Reply from email** - use Papercups to answer support tickets via email
-- **Reply from SMS** - forward Twilio conversations and respond to SMS requests from Papercups
+- **Reply from email** - use Hakerspeak to answer support tickets via email
+- **Reply from SMS** - forward Twilio conversations and respond to SMS requests from Hakerspeak
 - **Custom chat widget** - a customizable chat widget you can embed on your website to talk to your customers
-- **React support** - embed the chat widget as a [React component](https://github.com/papercups-io/chat-widget#using-in-react), or a simple [HTML snippet](https://github.com/papercups-io/chat-widget#using-in-html)
-- **React Native support** - embed the chat widget in your [React Native](https://github.com/papercups-io/chat-widget-native#papercups-iochat-widget-native) app
-- **Flutter support** - embed the chat widget in your [Flutter](https://github.com/papercups-io/papercups_flutter) app (courtesy of @aguilaair :heart:)
+- **React support** - embed the chat widget as a [React component](https://github.com/Hakerspeak-io/chat-widget#using-in-react), or a simple [HTML snippet](https://github.com/Hakerspeak-io/chat-widget#using-in-html)
+- **React Native support** - embed the chat widget in your [React Native](https://github.com/Hakerspeak-io/chat-widget-native#Hakerspeak-iochat-widget-native) app
+- **Flutter support** - embed the chat widget in your [Flutter](https://github.com/Hakerspeak-io/Hakerspeak_flutter) app (courtesy of @aguilaair :heart:)
 - **Slack integration** - connect with Slack, so you can view and reply to messages directly from a Slack channel
-- **Mattermost integration** - connect with [Mattermost](https://docs.papercups.io/reply-from-mattermost), so you can view and reply to messages directly from Mattermost
+- **Mattermost integration** - connect with [Mattermost](https://docs.Hakerspeak.io/reply-from-mattermost), so you can view and reply to messages directly from Mattermost
 - **Markdown and emoji support** - use markdown and emoji to add character to your messages!
 - **Invite your team** - send invite links to your teammates to join your account
 - **Conversation management** - close, assign, and prioritize conversations
@@ -38,21 +37,21 @@ We wanted to make a self-hosted customer support tool like Zendesk and Intercom 
 
 ## Demo
 
-We set up a [simple page](https://app.papercups.io/demo) that demonstrates how Papercups works.
+We set up a [simple page](https://app.Hakerspeak.io/demo) that demonstrates how Hakerspeak works.
 
 Try sending us a message to see what the chat experience is like!
 
 ## Blog
 
-Check out our [blog](https://papercups.io/blog) for more updates and learnings
+Check out our [blog](https://Hakerspeak.io/blog) for more updates and learnings
 
 ## Documentation
 
-Check out our docs at [docs.papercups.io](https://docs.papercups.io/)
+Check out our docs at [docs.Hakerspeak.io](https://docs.Hakerspeak.io/)
 
 ## Contributing
 
-We :heart: contributions big or small. See [CONTRIBUTING.md](https://github.com/papercups-io/papercups/blob/master/CONTRIBUTING.md) for a guide on how to get started.
+We :heart: contributions big or small. See [CONTRIBUTING.md](https://github.com/Hakerspeak-io/Hakerspeak/blob/master/CONTRIBUTING.md) for a guide on how to get started.
 
 ## Thanks to all of our contributors!
 
@@ -90,4 +89,4 @@ We :heart: contributions big or small. See [CONTRIBUTING.md](https://github.com/
 
 ## License
 
-MIT © Papercups
+MIT © Hakerspeak

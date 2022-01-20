@@ -194,7 +194,7 @@ export const PricingOptionsModal = ({
         title="Enterprise"
         description="Advanced workflows, security, and support."
         cta={
-          <a href="mailto:founders@papercups.io?Subject=Papercups Enterprise Edition">
+          <a href="mailto:founders@Hakerspeak.io?Subject=Hakerspeak Enterprise Edition">
             <Button type="primary" size="large" block ghost disabled={pending}>
               Contact sales
             </Button>

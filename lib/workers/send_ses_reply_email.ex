@@ -47,8 +47,8 @@ defmodule ChatApi.Workers.SendSesReplyEmail do
 
     email = %{
       to: ses_from,
-      from: "#{sender_name} <mailer@chat.papercups.io>",
-      reply_to: "reply+#{conversation_id}@chat.papercups.io",
+      from: "#{sender_name} <mailer@chat.Hakerspeak.io>",
+      reply_to: "reply+#{conversation_id}@chat.Hakerspeak.io",
       subject: ses_subject,
       text: message.body,
       in_reply_to: ses_message_id,

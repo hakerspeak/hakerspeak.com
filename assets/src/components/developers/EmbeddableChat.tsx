@@ -5,7 +5,7 @@ import {
   ChatFooter,
   BodyProps,
   Config,
-} from '@papercups-io/chat-builder';
+} from '@Hakerspeak-io/chat-builder';
 import {Message} from '../../types';
 import {MarkdownRenderer} from '../common';
 
@@ -176,7 +176,7 @@ const EmbeddableChat = ({
   height?: number | string;
   width?: number | string;
   sx?: SxStyleProp;
-  onChatLoaded?: (papercups: any) => void;
+  onChatLoaded?: (Hakerspeak: any) => void;
   onMessageSent?: (message: any) => void;
   onMessageReceived?: (message: any) => void;
 }) => {

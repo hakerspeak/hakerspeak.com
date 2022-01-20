@@ -191,7 +191,7 @@ defmodule ChatApiWeb.EventChannel do
   end
 
   defp storytime_enabled?() do
-    case System.get_env("PAPERCUPS_STORYTIME_ENABLED", "true") do
+    case System.get_env("Hakerspeak_STORYTIME_ENABLED", "true") do
       enabled when enabled == "1" or enabled == "true" -> true
       _ -> false
     end

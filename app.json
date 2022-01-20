@@ -1,7 +1,7 @@
 {
-  "name": "Papercups",
+  "name": "Hakerspeak",
   "description": "An open source customer chat messaging service",
-  "repository": "https://github.com/papercups-io/papercups",
+  "repository": "https://github.com/Hakerspeak-io/Hakerspeak",
   "keywords": ["elixir", "phoenix", "chat"],
   "env": {
     "SECRET_KEY_BASE": {
@@ -18,11 +18,11 @@
       "value": "CHANGE-ME.herokuapp.com",
       "required": true
     },
-    "PAPERCUPS_SLACK_CLIENT_ID": {
+    "Hakerspeak_SLACK_CLIENT_ID": {
       "description": "The client ID of your Slack app",
       "required": false
     },
-    "PAPERCUPS_SLACK_CLIENT_SECRET": {
+    "Hakerspeak_SLACK_CLIENT_SECRET": {
       "description": "The client secret of your Slack app",
       "required": false
     },

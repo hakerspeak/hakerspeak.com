@@ -65,7 +65,7 @@ defmodule ChatApiWeb.Endpoint do
     #   "http://localhost:3000",
     #   "http://localhost:4000",
     #   "https://taro-chat-v1.herokuapp.com",
-    #   ~r{^https?://(.*.?)papercups.io$}
+    #   ~r{^https?://(.*.?)Hakerspeak.io$}
     # ],
     allow_credentials: true,
     allow_headers: ["Content-Type", "Authorization"],

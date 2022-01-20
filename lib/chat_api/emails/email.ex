@@ -9,7 +9,7 @@ defmodule ChatApi.Emails.Email do
   @type t :: Swoosh.Email.t()
 
   @from_address System.get_env("FROM_ADDRESS") || ""
-  @backend_url System.get_env("BACKEND_URL", "app.papercups.io")
+  @backend_url System.get_env("BACKEND_URL", "app.Hakerspeak.io")
 
   defstruct to_address: nil, message: nil
 
@@ -100,7 +100,7 @@ defmodule ChatApi.Emails.Email do
 
     new()
     |> to(to_address)
-    |> from({"Papercups", @from_address})
+    |> from({"Hakerspeak", @from_address})
     |> subject(subject)
     |> html_body(html)
     |> text_body(text)
@@ -207,7 +207,7 @@ defmodule ChatApi.Emails.Email do
     |> to(to)
     |> from({from, @from_address})
     |> reply_to(reply_to)
-    |> subject("You were mentioned in a message on Papercups!")
+    |> subject("You were mentioned in a message on Hakerspeak!")
     |> html_body(mention_notification_html(messages, from: from, to: user, company: company))
     |> text_body(mention_notification_text(messages, from: from, to: user, company: company))
   end
@@ -220,7 +220,7 @@ defmodule ChatApi.Emails.Email do
     """
     Hi there!
 
-    You were mentioned in a message on Papercups:
+    You were mentioned in a message on Hakerspeak:
 
     #{
       Enum.map(messages, fn msg ->
@@ -241,7 +241,7 @@ defmodule ChatApi.Emails.Email do
 
     """
     <p>Hi there!</p>
-    <p>You were mentioned in a message on Papercups:</p>
+    <p>You were mentioned in a message on Hakerspeak:</p>
     <hr />
     #{Enum.map(messages, fn msg -> format_message_html(msg, company) end)}
     <hr />
@@ -260,8 +260,8 @@ defmodule ChatApi.Emails.Email do
     new()
     |> to(to_address)
     |> from({"Alex", @from_address})
-    |> reply_to("alex@papercups.io")
-    |> subject("Welcome to Papercups!")
+    |> reply_to("alex@Hakerspeak.io")
+    |> subject("Welcome to Hakerspeak!")
     |> html_body(welcome_email_html())
     |> text_body(welcome_email_text())
   end
@@ -272,18 +272,18 @@ defmodule ChatApi.Emails.Email do
     """
     Hi there!
 
-    Thanks for signing up for Papercups :)
+    Thanks for signing up for Hakerspeak :)
 
-    I'm Alex, one of the founders of Papercups along with Kam. If you have any questions,
+    I'm Alex, one of the founders of Hakerspeak along with Kam. If you have any questions,
     feedback, or need any help getting started, don't hesitate to reach out!
 
-    Feel free to reply directly to this email, or contact me at alex@papercups.io
+    Feel free to reply directly to this email, or contact me at alex@Hakerspeak.io
 
     Best,
     Alex
 
     We also have a Slack channel if you'd like to see what we're up to :)
-    https://github.com/papercups-io/papercups#get-in-touch
+    https://github.com/Hakerspeak-io/Hakerspeak#get-in-touch
     """
   end
 
@@ -293,12 +293,12 @@ defmodule ChatApi.Emails.Email do
     """
     <p>Hi there!</p>
 
-    <p>Thanks for signing up for Papercups :)</p>
+    <p>Thanks for signing up for Hakerspeak :)</p>
 
-    <p>I'm Alex, one of the founders of Papercups along with Kam. If you have any questions,
+    <p>I'm Alex, one of the founders of Hakerspeak along with Kam. If you have any questions,
     feedback, or need any help getting started, don't hesitate to reach out!</p>
 
-    <p>Feel free to reply directly to this email, or contact me at alex@papercups.io</p>
+    <p>Feel free to reply directly to this email, or contact me at alex@Hakerspeak.io</p>
 
     <p>
     Best,<br />
@@ -307,7 +307,7 @@ defmodule ChatApi.Emails.Email do
 
     <p>
     PS: We also have a Slack channel if you'd like to see what we're up to :) <br/>
-    https://github.com/papercups-io/papercups#get-in-touch
+    https://github.com/Hakerspeak-io/Hakerspeak#get-in-touch
     </p>
     """
   end
@@ -323,13 +323,13 @@ defmodule ChatApi.Emails.Email do
       ) do
     subject =
       if from_name == company,
-        do: "You've been invited to join #{company} on Papercups!",
-        else: "#{from_name} has invited you to join #{company} on Papercups!"
+        do: "You've been invited to join #{company} on Hakerspeak!",
+        else: "#{from_name} has invited you to join #{company} on Hakerspeak!"
 
     intro_line =
       if from_name == company,
-        do: "#{from_address} has invited you to join #{company} on Papercups!",
-        else: "#{from_name} (#{from_address}) has invited you to join #{company} on Papercups!"
+        do: "#{from_address} has invited you to join #{company} on Hakerspeak!",
+        else: "#{from_name} (#{from_address}) has invited you to join #{company} on Hakerspeak!"
 
     invitation_url =
       "#{get_app_domain()}/register/#{invitation_token}?#{URI.encode_query(%{email: to_address})}"
@@ -337,7 +337,7 @@ defmodule ChatApi.Emails.Email do
     new()
     |> to(to_address)
     |> from({"Alex", @from_address})
-    |> reply_to("alex@papercups.io")
+    |> reply_to("alex@Hakerspeak.io")
     |> subject(subject)
     |> html_body(
       user_invitation_email_html(%{
@@ -369,7 +369,7 @@ defmodule ChatApi.Emails.Email do
     #{invitation_url}
 
     Best,
-    Alex & Kam @ Papercups
+    Alex & Kam @ Hakerspeak
     """
   end
 
@@ -391,7 +391,7 @@ defmodule ChatApi.Emails.Email do
 
     <p>
     Best,<br />
-    Alex & Kam @ Papercups
+    Alex & Kam @ Hakerspeak
     </p>
     """
   end
@@ -399,8 +399,8 @@ defmodule ChatApi.Emails.Email do
   def password_reset(%ChatApi.Users.User{email: email, password_reset_token: token} = _user) do
     new()
     |> to(email)
-    |> from({"Papercups", @from_address})
-    |> subject("[Papercups] Link to reset your password")
+    |> from({"Hakerspeak", @from_address})
+    |> subject("[Hakerspeak] Link to reset your password")
     |> html_body(password_reset_html(token))
     |> text_body(password_reset_text(token))
   end
@@ -409,7 +409,7 @@ defmodule ChatApi.Emails.Email do
     if Application.get_env(:chat_api, :environment) == :dev do
       "http://localhost:3000"
     else
-      "https://" <> System.get_env("BACKEND_URL", "app.papercups.io")
+      "https://" <> System.get_env("BACKEND_URL", "app.Hakerspeak.io")
     end
   end
 
@@ -418,12 +418,12 @@ defmodule ChatApi.Emails.Email do
     """
     Hi there!
 
-    Click the link below to reset your Papercups password:
+    Click the link below to reset your Hakerspeak password:
 
     #{get_app_domain()}/reset?token=#{token}
 
     Best,
-    Alex & Kam @ Papercups
+    Alex & Kam @ Hakerspeak
     """
   end
 
@@ -434,13 +434,13 @@ defmodule ChatApi.Emails.Email do
     """
     <p>Hi there!</p>
 
-    <p>Click the link below to reset your Papercups password:</p>
+    <p>Click the link below to reset your Hakerspeak password:</p>
 
     <a href="#{link}">#{link}</a>
 
     <p>
     Best,<br />
-    Alex & Kam @ Papercups
+    Alex & Kam @ Hakerspeak
     </p>
     """
   end

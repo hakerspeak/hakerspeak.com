@@ -22,7 +22,7 @@ defmodule ChatApi.Slack.Event do
         "is_ext_shared_channel" => true
       }) do
     # NB: this is a bit of a hack -- we override the "team" id in the "event" payload
-    # to match the "team" where the Papercups app is installed (rather than the "team"
+    # to match the "team" where the Hakerspeak app is installed (rather than the "team"
     # of the external workspace, where messages may also originate from)
     event
     |> Map.merge(%{"team" => team})
@@ -153,7 +153,7 @@ defmodule ChatApi.Slack.Event do
     end
   end
 
-  # NB: this currently listens for the Papercups app being added to a Slack channel.
+  # NB: this currently listens for the Hakerspeak app being added to a Slack channel.
   def handle_event(
         %{
           "type" => "message",
@@ -187,7 +187,7 @@ defmodule ChatApi.Slack.Event do
          {:ok, channel} <- Slack.Extractor.extract_slack_channel(response),
          %{"name" => name, "purpose" => purpose, "topic" => topic} <- channel do
       Slack.Helpers.send_internal_notification(
-        "Papercups app was added to Slack channel `##{name}` for account `#{account_id}`"
+        "Hakerspeak app was added to Slack channel `##{name}` for account `#{account_id}`"
       )
 
       # TODO: should we do this? might make onboarding a bit easier, but would also set up

@@ -396,7 +396,7 @@ class SlackSyncIntegrationDetails extends React.Component<Props, State> {
           <Title level={3}>Sync with Slack</Title>
 
           <Paragraph>
-            <Text>Sync messages from your Slack channels with Papercups.</Text>
+            <Text>Sync messages from your Slack channels with Hakerspeak.</Text>
           </Paragraph>
         </Box>
 
@@ -412,9 +412,9 @@ class SlackSyncIntegrationDetails extends React.Component<Props, State> {
             </Paragraph>
 
             <Text type="secondary">
-              When you link Papercups with shared Slack channels or public
+              When you link Hakerspeak with shared Slack channels or public
               support channels, you can sync message threads directly to
-              Papercups so you can track and manage feedback from your users
+              Hakerspeak so you can track and manage feedback from your users
               more easily.
             </Text>
           </Card>

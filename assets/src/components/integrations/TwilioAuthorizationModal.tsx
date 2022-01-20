@@ -117,7 +117,7 @@ const TwilioAuthorizationModal = ({
           <Text type="secondary">
             To get set up, please follow{' '}
             <a
-              href="https://docs.papercups.io/reply-via-sms"
+              href="https://docs.Hakerspeak.io/reply-via-sms"
               target="_blank"
               rel="noopener noreferrer"
             >
