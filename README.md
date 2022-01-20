@@ -15,7 +15,7 @@ _Watch how easy it is to get set up with our Slack integration 🚀 :_
 
 The fastest way to get started is one click deploy on Heroku with:
 
-<a href="https://heroku.com/deploy?template=https://github.com/Hakerspeak-io/Hakerspeak"><img src="https://www.herokucdn.com/deploy/button.svg" width="200px" /></a>
+<a href="https://heroku.com/deploy?template=https://github.com/papercups-io/papercups"><img src="https://www.herokucdn.com/deploy/button.svg" width="200px" /></a>
 
 ## Philosophy
 
